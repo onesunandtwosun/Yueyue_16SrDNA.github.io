@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0032)http://rdp.cme.msu.edu/index.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RDP Release 11 -- Sequence Analysis Tools</title>
+    <meta name="keywords" content="MSU,RDP,ribosome,rRNA,16S,bacteria,archaea,environmental,database,classifier,seqmatch,probematch,myRDP,pyrosequencing,taxomatic">
+    <meta name="description" content="Ribosomal Database Project at Michigan State University">
+    
+    
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="robots" content="nofollow">
+    <link rel="shortcut icon" href="http://rdp.cme.msu.edu/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/rss+xml" href="http://pyro.cme.msu.edu/news/feed.spr" title="RDP RSS Feed">
+
+<style type="text/css"> /* ~~ KEEP FOR THIS PAGE ONLY, no connection to other stylesheet css ~~ */
+/* ~~ see IE fixes at end of style tag ~~ */
+
+/* ~~ ALWAYS KEEP these generic a and * tags FIRST; specific ones will appear at the end of the stylesheet ~~ */
+a { text-decoration: none; font-style: italic; color:#003A83; }
+a:hover { color: #00F; text-decoration: underline; }
+a.pages { text-decoration: underline; }
+* { margin: 0; padding: 0; background-color: transparent; } 
+/* ~~ Due to variations between browsers, it's best practices to zero padding and margin on items ~~ */
+
+body { font: 0.85em/1.2 "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; margin:0px; color: #333; }
+
+/* ~~ After these UNIQUE TO PAGE DIVS which can only appear once per page, I will try to keep the classes in my stylesheets alphabetical, all specialized “a” links will appear at the end ~~ */
+
+/* ~~ This is the upper menu style - gives mouseover effect and has no visited color clues ~~ */
+#menu { width: 100%; text-align: center; text-transform: uppercase; text-decoration: none; font-style: normal; font-weight: 700; font-size: 85%;  white-space: nowrap; color: #03F; background-color: #ECECEC; border: 2px solid #CCC; padding: 14px 0px 4px 0px; }
+#menu a { font-style: normal; padding: 0 15px; }
+/* ~~ this container surrounds all other divs under the top menu giving them their percentage-based width, gave it a background color to keep all news inside gray area no matter the length, CAREFUL that it does not PEEK out from under the other divs it surrounds ALSO, long links cause cutoff and are never closed, causing page problems, so BEST NOT TO USE LINKS IN NEWS ITEMS! ~~ */
+#container { width: 90%; max-width: 1260px;
+/* ~~ a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. ~~ */
+min-width: 780px; padding: 0; 
+/* ~~ a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration ~~ */
+margin: auto; margin-top: 7px; margin-bottom: 30px; 
+/* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100% ~~ */ 
+clear: both; }
+/* ~~ this clear property forces the .container to understand where the columns end and contain them ~~ */
+#content { width: 67%; float: right; background-color: #FFF; display: block; }
+#footer { border-top: 1px solid #000; width: 90%; margin: auto; padding: 0px 20px 20px 20px; background-color: #FFF; position:relative;
+/* ~~ this gives IE6 hasLayout to properly clear ~~ */ display: block; clear: both; }
+#logoNews { margin-top: -6px; float: left; width: 33%; background-color: #ececec; height: 100%; overflow: auto; }
+#news { text-align: left; font-size: 85%; background-color: #transparent; padding: 0px 20px 10px 10px; }
+
+.abbrevs { font-size: 300%; }
+/* BOXES of color, keep together even though not alphabetical */
+/* see table setup below */
+.boxes { background-color: transparent; border: 0; margin: 10px auto; margin-bottom: 25px; }
+a.boxes { font-style: normal; font-color: #FFF; }
+p.bluBox { color: #FFF; text-align:center;  font-size: 90%; font-weight: bold; background-color: #007FFF; padding: 9px 9px 0px 9px; margin: 5px; height: 80px; width:80px; -moz-border-radius: 10px; border-radius: 10px; }
+p.grnBox { color: #FFF; text-align:center;  font-size: 90%; font-weight: bold; background-color: #390; padding: 9px 9px 0px 9px; margin: 5px; height: 80px; width:80px; -moz-border-radius: 10px; border-radius: 10px; }
+p.ornBox { color: #FFF; text-align:center;  font-size: 90%; font-weight: bold; background-color: #FF8000; padding: 9px 9px 0px 9px; margin: 5px; height: 80px; width:80px; -moz-border-radius: 10px; border-radius: 10px; }
+p.purBox { color: #FFF; text-align:center;  font-size: 90%; font-weight: bold; background-color: #8000FF; padding: 9px 9px 0px 9px; margin: 5px; height: 80px; width:80px; -moz-border-radius: 10px; border-radius: 10px; }
+.preBoxes { margin: 30px 40px 20px 40px; }
+.postBoxes { margin: 40px; }
+/* end of BOXES section */
+
+.center { text-align: center; }
+.clearfloat { /* this class can be placed on a br or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both; height:0; font-size: 1px; line-height: 0px; }
+/* ~~ miscellaneous float/clear classes ~~ */
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0; /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+margin-bottom: 10px; padding: 5px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */ }
+h2 { font-size: 120%; font-weight:bold; margin: 7px 0; }
+h3 { font-size: 110%; font-weight:bold; margin: 10px 0; }
+.hide { color: #000; display: none; }
+.myRDP { position:relative; top: 0px; display: inline; text-align: right; float: right; }
+.noprint { /*shows up on page, but will not print with print.css, so use for large logo images*/ }
+p { margin-bottom: 15px; }
+.release { margin: 20px 40px 0px 40px; white-space: nowrap; }
+.smaller { font-size: 80%; }
+
+/* ~~ This grouped selector gives the lists space ~~ */
+ul, ol { padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */ }
+
+/* ~~ SPECIALIZED A LINKS ~~ */
+a.ext { background-image: url(images/external.png); background-position: center right; background-repeat: no-repeat; padding-right: 13px; }
+a img { border: none; }
+/* ~~ this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link ~~ */
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link { color: #00F; text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */ }
+a:visited { color: #8033FF;	text-decoration: none; }
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */ color: #FF8000; text-decoration: underline; }
+a.white { color: #fff; }
+</style>
+</head>
+<body><a name="top" id="top"></a>
+  <div id="menu">
+     <a href="http://rdp.cme.msu.edu/misc/about.jsp">About RDP</a>|
+     <a href="http://rdp.cme.msu.edu/assigngen/index.jsp">Assignment&nbsp;Generator</a>|
+     <a href="http://rdp.cme.msu.edu/misc/citation.jsp">Citation</a>|
+     <a href="http://rdp.cme.msu.edu/misc/contacts.jsp">Contacts</a>|
+     <a href="http://rdp.cme.msu.edu/misc/related.jsp">Related&nbsp;Sites</a>|
+     <a href="http://rdp.cme.msu.edu/misc/resources.jsp">Resources</a>|
+     <a href="http://rdp.cme.msu.edu/help/tutorial.jsp">Tutorials</a>|
+     <a href="http://rdp.cme.msu.edu/wiki/index.php/Main_Page">USER wiki</a>
+  </div><!--menu ends -->
+
+<div id="container" style="background-color: #ececec;"><!-- container closed just AFTER footer div -->
+    <div id="logoNews" class="center"><img src="./top1_files/rdp160x120Gray.png" width="160" height="120" alt="RDP" name="RDP_logo" id="RDP_logo" style="padding: 5px 0 5px 0;"><h1 class="hide">RDP: Release 11</h1>
+      <div id="news">
+          <h2 class="center" style="color: #390;">ANNOUNCEMENTS</h2>
+     <div class="newsfeed">
+          
+              
+                  
+                  
+              <div class="newsfeed">
+<span class="newsfeed-feedtitle">RDP News</span><br><br>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=435&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">10/07/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">Xander assembler article is published.</span></a><br><span class="newsfeed-excerpt">Xander: Employing a Novel Method for Efficient Gene-Targeted Metagenomic Assembly</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=434&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">10/07/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">Warcup Fungal ITS article is accepted!</span></a><br><span class="newsfeed-excerpt"> Fungal identification using a Bayesian Classifier and the 'Warcup' training set of Internal Transcribed Spacer sequences.</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=433&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">07/08/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">*** Pyro Job Submission up ***</span></a><br><span class="newsfeed-excerpt">Hardware Issues causing pyro issues now fixed</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=431&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">05/28/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">RDP Staff attending ASM Meeting in New Orleans</span></a><br><span class="newsfeed-excerpt">RDP staff will be attending the ASM General Meeting in New Orleans in the coming week. Two RDP posters will be presented: first on Tuesday morning:...</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=430&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">05/26/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">RDP Release 11.4 available</span></a><br><span class="newsfeed-excerpt">Updated 16S rRNA hierarchy model to training set No. 14.</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=429&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">03/27/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">FrameBot new option Add de novo to references available</span></a><br><span class="newsfeed-excerpt"> Unique abundant query sequences will be added to the starting reference set if qualifications are met.</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=428&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">02/23/2015</span>&nbsp;&nbsp;<span class="newsfeed-title"><b>WARNING -- RDP unavailable Sat., March 7th</b></span></a><br><span class="newsfeed-excerpt">Building network infrastructure upgrades planned 8 A.M. through 6 P.M.</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=427&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">02/16/2015</span>&nbsp;&nbsp;<span class="newsfeed-title">Introducing Xander assembler </span></a><br><span class="newsfeed-excerpt">RDP's new gene-target metagenomic assembler, Xander, is released</span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=423&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">10/21/2014</span>&nbsp;&nbsp;<span class="newsfeed-title">Classifier provides gene copy number adjustment</span></a><br><span class="newsfeed-excerpt">RDP Classifier provides gene copy number adjustment for 16S gene sequences. </span>
+</p>
+<p class="newsfeed-post">
+<a href="javascript:void(0)" onclick="javascript:window.open(&#39;http://pyro.cme.msu.edu/news/showpost.spr?pid=422&#39;,&#39;&#39;,&#39;scrollbars=no,menubar=no,height=600,width=800,resizable=no,toolbar=no,location=no,status=no&#39;);"><span class="newsfeed-date">09/17/2014</span>&nbsp;&nbsp;<span class="newsfeed-title">Using RDPTools Output with Phyloseq</span></a><br><span class="newsfeed-excerpt">A comprehensive tutorial using RDPTools output with Phyloseq package released</span>
+</p>
+</div>
+
+          
+
+          
+       </div><!-- see if this helps layout? NOPE, ADDS gray at bottom of content; perhaps put an end div inside or after the first import?  -->
+      <!-- end .news --></div>
+    <!-- end logoNews --></div>
+
+<div id="content"><!-- still within the container div -->
+  <div class="myRDP">
+    
+      
+      
+
+        <div class="noprint center" style="display: block;">
+          <a href="http://rdp.cme.msu.edu/myrdp/overview.spr" style="text-decoration:none;">
+          <img src="./top1_files/myRDP47x33gr.png" width="47" height="33" alt="myRDP">
+          <br>
+          login
+          </a>
+        </div>
+     
+    
+  </div><!-- ends myRDP section -->
+
+  <div class="release">
+    
+
+<!-- THIS IS THE OLD VERSION, NEW ONE BELOW; STYLED ON TOP OF INDEX PAGE; SEE .release SECTION in STYLE tag
+<span style="font-size: 120%;"><strong><a href="misc/rel10info.jsp">RDP Release 10, Update 32</a> <em style="color: #ff6600;">::</em>
+May 14, 2013 <em style="color: #ff6600;">::</em> 
+2,765,278 &#160;16S&#160;rRNAs</strong></span> -->
+
+  <div class="release">
+    <h2>RDP Release 11, Update 4 :: May 26, 2015 </h2>
+    <h3>3,224,600 16S rRNAs :: 108,901 Fungal 28S rRNAs <br>    
+        Find out what's new in RDP Release 11.4 <em><a href="http://rdp.cme.msu.edu/misc/rel10info.jsp">here</a></em>.</h3>
+  </div><!-- ends release -->
+ 
+
+  </div><!-- ends release -->
+
+      <p style="float: right;"><a href="http://rdp.cme.msu.edu/misc/citation.jsp"><strong>Cite RDP's latest tool articles.</strong></a></p>
+
+  <div class="preBoxes"><br>
+        <p>RDP provides quality-controlled, aligned and annotated Bacterial and Archaeal 16S rRNA sequences, and Fungal 28S rRNA sequences,
+            and a suite of analysis tools to the scientific community. New to RDP release 11:</p>
+    <p></p><ul>
+	    <li>RDP tools have been updated to work with the new fungal 28S rRNA sequence collection.</li>
+            <li>A new Fungal 28S Aligner and updated Bacterial and Archaeal 16S Aligner.
+                We optimized the parameters for these secondary-structure based Infernal aligners to provide improved handling for partial sequences.
+            </li>
+            <li>Updated RDPipeline offers extended processing and analysis tools to process high-throughput sequencing data, including single-strand and paired-end reads.</li>
+            <li>Most of the RDP tools are now available as open source packages for users to incorporate in their local workflow.</li>
+        </ul><p></p>
+  </div><!-- ends preBoxes -->
+
+  <table class="boxes" style="font-color: #fff;">
+    <tbody><tr>
+      <td>
+      <p class="bluBox"><a class="white boxes" href="http://rdp.cme.msu.edu/hierarchy/hb_intro.jsp"><img src="./top1_files/hbonlysm.png" width="66" height="48" alt="Hierarchy Browser"><br>Hierarchy<br>Browser</a></p>
+      </td>
+      <td>
+      <p class="purBox"><a class="white boxes" href="http://rdp.cme.msu.edu/classifier/classifier.jsp"><img src="./top1_files/clonlysm.png" width="66" height="48" alt="RDP Classifier"><br><br>Classifier</a></p>
+      </td>
+      <td>
+      <p class="ornBox"><a class="white boxes" href="http://rdp.cme.msu.edu/probematch/search.jsp"><img src="./top1_files/pmonlysm.png" width="66" height="48" alt="Probe Match"><br>Probe<br>Match</a></p>
+      </td>
+      <td>
+      <p class="grnBox"><a class="white boxes" href="http://fungene.cme.msu.edu/"><img src="./top1_files/fgonlysm.png" width="66" height="48" alt="FunGene"><br><br>FunGene</a></p>
+      </td>
+    </tr><tr>
+      <td>
+      <p class="grnBox"><a class="white boxes" href="http://rdp.cme.msu.edu/misc/googleSheetsHelp.jsp"><img src="./top1_files/mgonlysm.png" width="66" height="48" alt="MIxS GoogleSheets"><br>MIxS<br>GoogleSheets</a></p>
+      </td>
+      <td>
+      <p class="bluBox"><a class="white boxes" href="http://rdp.cme.msu.edu/comparison/comp.jsp"><img src="./top1_files/lconlysm.png" width="66" height="48" alt="Library Compare"><br>Library<br>Compare</a></p>
+      </td>
+      <td>
+      <p class="purBox"><a class="white boxes" href="http://rdp.cme.msu.edu/seqmatch/seqmatch_intro.jsp"><img src="./top1_files/smonlysm.png" width="66" height="48" alt="Sequence Match"><br>Sequence<br>Match</a></p>
+      </td>
+      <td>
+      <p class="ornBox"><a class="white boxes" href="http://pyro.cme.msu.edu/"><img src="./top1_files/rponlysm.png" width="66" height="48" alt="RDPipeline"><br><br>RDPipeline</a></p>
+      </td>
+    </tr><tr>
+      <td>
+      <p class="ornBox"><a class="white boxes" href="http://pyro.cme.msu.edu/aligner/form.spr"><img src="./top1_files/alonlysm.png" width="66" height="48" alt="RDP Aligner"><br><br>Aligner</a></p>
+      </td>
+      <td>
+      <p class="grnBox"><a class="white boxes" href="http://rdp.cme.msu.edu/treebuilder/treeing.spr"><img src="./top1_files/tbonlysm.png" width="66" height="48" alt="Tree Builder"><br>Tree<br>Builder</a></p>
+      </td>
+      <td>
+      <p class="bluBox"><a class="white boxes" href="https://github.com/rdpstaff"><img src="./top1_files/osonlysm.png" width="66" height="48" alt="RDP Open Source Tools"><br>RDP<br>Open Source</a></p>
+      </td>
+      <td>
+      <p class="purBox"><a class="white boxes" href="http://rdp.cme.msu.edu/tutorials/RDPtutorial_CONTENTS.html"><img src="./top1_files/tuonlysm.png" width="66" height="48" alt="Tutorials"><br><br>Tutorials</a></p>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <div class="postBoxes">
+      <h3>RDP's mission and funding:</h3>
+        <p>Part of RDP's mission is to provide support to our users. Email and phone contacts are available on the <a href="http://rdp.cme.msu.edu/misc/contacts.jsp">contacts page</a>.</p>
+        <p style="clear:both; text-align:center; margin-top: -10px;"><img src="./top1_files/doe_ober.jpg" width="96" height="95" alt="DOE">&nbsp;&nbsp;&nbsp;<img src="./top1_files/srplogo.gif" width="150" height="90" alt="NIEHS Superfund Research Program"><img src="./top1_files/NIH-hmp-logo.png" width="120" height="105" alt="NIH Human Microbiome Project"></p>
+  </div>
+
+        <p class="smaller" style="clear:both; text-align:center; margin: -20px 0px 0px 0px;">Questions/comments:&nbsp;<a href="mailto:rdpstaff@msu.edu">rdpstaff@msu.edu</a><br><a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="./top1_files/by-sa.png" width="149" height="52" style="padding: 10px 0px;" alt="Creative Commons License"></a></p>
+<br class="clearfloat">
+
+</div><!-- end .content -->
+</div><!-- end .container -->
+
+    <div id="footer">
+
+        <span style="float:left; display:inline; padding: 0; background-color: #FFF;">
+        &nbsp;<a href="http://rdp.cme.msu.edu/index.jsp#top"><img src="./top1_files/rdpup.gif" width="15" height="10" border="0" alt="Move to Top">top</a></span>
+        <span style="float:right; display:inline; padding: 0; background-color: #FFF;">
+        <a href="http://rdp.cme.msu.edu/index.jsp#top">top<img src="./top1_files/rdpup.gif" width="15" height="10" border="0" alt="Move to Top"></a>&nbsp;</span>
+<br>
+      <span style="float:left;"><a href="http://cme.msu.edu/"><img src="./top1_files/cmemsu.jpg" width="234" height="30" alt="CME@MSU" style="padding: 10px 0px;"></a><br><span class="smaller" style="white-space:nowrap;">© 1992-2014 Michigan State University<br>Board of Trustees, East Lansing MI 48824
+      </span></span>
+      <span style="float:right; text-align: right;"><a href="http://www.msu.edu/"><img src="./top1_files/MSU-Wordmark-Green-120-pxls.gif" width="121" height="27" alt="Michigan State University" style="padding: 10px 0px;"></a><br>
+          <span class="smaller" style="white-space:nowrap;">
+      MSU is an affirmative-action,<br>equal-opportunity employer.
+      </span></span>
+    </div><!-- end .footer -->
+        <script src="./top1_files/survey.js"></script>
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./top1_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-93090-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+
+</body></html>

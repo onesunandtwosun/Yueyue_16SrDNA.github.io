@@ -1,0 +1,288 @@
+﻿
+/* 1. CSS Imports
+--------------------------------------- */
+@import url(font-awesome.min.css);
+@import url(bootstrap.min.css);
+
+/* 2. General Styles
+--------------------------------------- */
+
+body { background-color: rgb(235,235,235); }
+
+.logo { display: block; }
+.logo h1 {
+	text-align:center;
+	padding-top: 10px;
+	padding-bottom: 15px;
+    margin: 0 auto;
+    font-size: 35px;
+	color:white;
+	font-family:Source Han Sans CN
+}
+.templatemo-content-wrapper {
+    float: left;
+    width: 100%;
+}
+.templatemo-content {
+    margin-left: 210px;
+    margin-top: 0px;
+    min-height: 600px;
+    padding: 55px 80px 0 80px;
+    background-color: white;
+    overflow-x: hidden;
+}
+.templatemo-footer {
+    clear: both;
+    font-size: 13px;
+    padding: 15px 0 5px 0;
+    text-align: center;
+    color: black;
+    background-color: #C6E2FF;
+}
+
+/* 3. Sidebar
+------------------------------------------------------*/
+
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+	border:0px;
+}
+.navbar-header { background-color: #8DB6CD;width:100%; border:0px;}
+.templatemo-sidebar {
+    padding: 0;
+    margin-top: 60px;
+	height:600px;
+}
+.mm{
+	 padding: 0;
+	height:500px;
+	border:10px solid red;
+	
+}
+.templatemo-sidebar a{
+	font-family:Source Han Sans CN
+}
+.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}
+ .badege{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}
+.templatemo-sidebar .templatemo-sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.templatemo-sidebar .templatemo-sidebar-menu > li > a {
+    display: block;
+    position: relative;
+    margin: 0 2px;
+    border: 0px;
+    padding: 30px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;    
+}
+.templatemo-sidebar-menu a { color:black ;  text-decoration:none;}
+
+/* .templatemo-sidebar-menu a:hover { text-decoration:none; } */
+/* .templatemo-sidebar-menu li.sub .templatemo-submenu { display: none; } */
+/* .templatemo-sidebar-menu li.sub.open .templatemo-submenu { display: block; }
+.templatemo-sidebar-menu li.sub.open .templatemo-submenu .templatemo-submenu-submenu { display: block; } */
+.templatemo-submenu { padding-left:0; }
+.templatemo-submenu a{ font-size: 14.5px;}
+/* .templatemo-submenu li.sub.open.sub a:hover{ text-decoration:overline} */
+.templatemo-submenu-submenu{ padding-left:0;}
+.templatemo-submenu-submenu  a{
+	display: block;
+    position: relative;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 300; 
+	/* text-indent:20px; */
+	}
+.templatemo-submenu li {
+    list-style: none;
+    background-color: rgb(235,235,235);
+}
+.templatemo-submenu-submenu li {
+    list-style: none;
+    background-color:rgb(235,235,235) ;/*灰色---*/
+}
+.templatemo-submenu li a {
+    display: block;
+    padding: 20px 15px;
+    margin: 0;
+
+}
+
+
+.templatemo-sidebar .templatemo-sidebar-menu >li.hover, .templatemo-sidebar .templatemo-sidebar-menu>li>a:hover {
+    background-color: #C6E2FF;/*天蓝色---*/
+}
+
+.templatemo-submenu li:hover {
+    background-color: #C6E2FF;
+}
+/* .templatemo-submenu li:visited {
+    background-color: #C6E2FF;
+} */
+/* .templatemo-submenu li > a:visited {
+   text-decoration:overline;
+} */
+.templatemo-submenu-submenu li:hover {
+    background-color: #C6E2FF;
+}
+.templatemo-sidebar .templatemo-sidebar-menu > li > a > i {
+    font-size: 18px;
+    top: 2px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+#page a:hover{text-decoration:none;}
+#page a{font-family: Source Han Sans CN;font-size: 17px;}
+.biaoyu{margin-top:100px;}
+p.paragraph {text-indent: 2em; font-size: 17px;line-height: 1.5em;font-family: Source Han Sans CN;}
+p.paragraph2 { font-size: 17px;line-height: 1.5em;font-family: Source Han Sans CN;}
+p.paragraph3 { font-size: 13.5px;line-height: 1.5em;font-family: Source Han Sans CN;}
+p.by{font-family: Source Han Sans CN;font-size: 24px;text-align:center;font-style:italic;color: #104E8B}
+p.paragraph a:link,p.paragraph a:visited,p.paragraph a:hover,p.paragraph a:active{text-decoration:none;}
+p.paragraph2 a:link,p.paragraph a:visited,p.paragraph a:hover,p.paragraph a:active{text-decoration:none;}
+
+p{margin: 0.2em;font-family:Source Han Sans CN;}
+p.minhead{font-size: 17px;line-height: 2em;font-family: Source Han Sans CN;}
+#page{page-break-after: always;}
+#form{text-align:center;}
+#form2{text-align:center;}
+#form3{text-align:center;}
+#form4{text-align:center;}
+#form5{text-align:center;}
+#form6{text-align:center;}
+#form7{text-align:center;}
+#testone1{position:absolute;z-index:999;};
+#testone2{position:absolute;z-index:998;};
+#testone3{position:absolute;z-index:997;};
+#testtwo{position:absolute;z-index:99;};
+img.chcc{width:600px;height:600px;border:10px solid rgb(235,235,235);padding:50px 100px}
+img.chcc2{width:30%}
+img.chcc3{width:50%}
+img.chcc4{width:40%}
+img.chcc5{width:50%}
+img.chcc7{width:40%}
+img.chcc3{width:35%}
+img.chcc1{width:40%}
+img.chcc6{width:40%}
+img.chcc0{width:100%}
+img.chcc8{width:50%}
+img.chcc9{width:70%}
+img.chcc10{width:35%}
+img.chcc11{width:40%}
+img.chcc12{width:20%}
+img.chcc13{width:50%}
+img.chcc14{width:60%}
+img.chcc15{width:40%}
+img.chcc16{width:40%}
+img.chcc17{width:20%}
+img.chcc18{width:50%}
+img.middle5{width:50%}
+img.middle6{width:40%}
+img.middle{height:70%;width:60%}
+img.middle1{width:15%;height:20%}
+img.middle2{width:12%;height:17%}
+img.middle3{width:20%;height:30%}
+img.middle0{margin:50px;width:20%;height:30%}
+img.middle4{position:relative;height:15%;width:15%;}
+p.head {text-align: right; color: grey; font-family: Source Han Sans CN;margin-bottom:-20px}
+img.logo {height: 60px;margin-top:0px;margin-left:-70px}
+img.logo3{height: 40px;margin-top:-5px}
+img.logo4{height:30px;margin-top:-5px}
+.aa {font-family: Source Han Sans CN;font-size: 35px;margin-top:5px;color: white;margin-left:15px;}
+.aa a{color: white;}
+.aa a:hover{text-decoration:none;color:#ADD8E6}
+.aa a:visited{text-decoration:none;}
+.aa a:active{text-decoration:none;}
+.aa a:link{text-decoration:none;}
+.foot a:hover{text-decoration:none;}
+.copyright_line {
+    float: left;
+    width: 5px;
+    height: 30px;
+    background-color:red;
+    margin-top: 22px;
+    margin-right:10px;
+}
+p.chart {text-align:center;font-family: Source Han Sans CN;font-size: 16px;}
+/* table {font-family: Source Han Sans CN;font-size: 16px;} */
+table {font-family: Source Han Sans CN;font-size: 16px;border-collapse: collapse;border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1;}
+
+table a:link,table a:visited,table a:hover,table a:active{text-decoration:none;}
+h2{margin-bottom:1em;font-family:Source Han Sans CN}
+h3{font-size: 22px;font-family:Source Han Sans CN}
+h4{font-size: 18px;font-family:Source Han Sans CN}
+p.foot{font-size: 10px;font-family:Source Han Sans CN}
+.myhide{
+	display: block; 
+	
+}
+.myhide2{
+	display:none;
+}
+.templatemo-sidebar-menu::-webkit-scrollbar {
+		  width: 0px;
+}
+#sy {font-family: Source Han Sans CN;padding-bottom:180px;padding-top:30px}
+#sy table{margin:10px auto;}
+#sy td{text-align:center;}
+td.you{padding:0 10px;}td.zuo{text-align:right;}
+/* 4. Maps
+------------------------------------------------------*/
+.jqvmap-zoomin, .jqvmap-zoomout {
+    width: 15px;
+    height: 15px;
+}
+.vmap { height: 400px; }
+
+/* 5. Media Queries
+------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+    .templatemo-sidebar {
+        width: 210px;
+        float: left;
+        position: relative;
+        margin-right: -100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .navbar-form {
+        padding: 0;
+        margin-left: 0;
+    }
+    .navbar-header { float: none; }
+    .navbar-toggle { display: block; }
+    .templatemo-sidebar {
+        border-top: 0 !important;
+        margin: 20px;
+    }
+    .templatemo-sidebar.navbar-collapse.collapse {
+        display: none !important;
+    }
+    .templatemo-sidebar.navbar-collapse.in {
+        border-top: 0 !important;
+        margin: 20px;
+        position: relative;
+        overflow: hidden !important;
+        overflow-y: auto !important;
+        display: block !important;
+    }
+    .templatemo-content-wrapper { float: none; }
+    .templatemo-content { margin: 0; }
+}
+@media screen and (max-width: 767px) {
+    .templatemo-chart-box {
+        padding-right: 0;
+    }
+}

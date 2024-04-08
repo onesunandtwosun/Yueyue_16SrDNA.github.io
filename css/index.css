@@ -1,0 +1,29 @@
+
+
+.img-width-max {
+    width: 80%;
+    max-width: 640px;
+}
+
+.img-width-max-middle0 {
+    width: 20%;
+	height:30%;
+	margin:50px;
+    max-width: 640px;
+}
+
+
+.img-width-max-middle4 {
+    position:relative;height:15%;width:15%;
+    max-width: 640px;
+}
+.img-width-max-middle5 {
+    width: 30%;
+    max-width: 640px;
+	margin:50px;
+}
+.img-width-max-chcc15 {
+    width: 40%;
+    max-width: 640px;
+	
+}

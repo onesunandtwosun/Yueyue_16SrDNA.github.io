@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://greengenes.lbl.gov/cgi-bin/nph-index.cgi -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>greengenes.lbl.gov - Aligned 16S rDNA data and tools</title>
+<link rev="made" href="mailto:tdesantis%20lbl%20gov">
+<meta name="keywords" content="16S rDNA rRNA ribosome database blast BLAST alignment MSA Simrank probe primer green genes NAST nast">
+<meta name="version" content="2005">
+<link rel="stylesheet" type="text/css" href="./top2_files/greengenes.css">
+
+</head>
+<body>
+
+
+
+
+  <font color="orange"><b>May 2013 Notice</b>:</font> The most recent Greengenes database and taxonomy 
+updates are now found at <a href="http://greengenes.secondgenome.com/downloads">greengenes.secondgenome.com</a>.
+Taxonomic information on this site is deprecated and should be used with caution. 
+
+<br><table width="" border="0" cellspacing="0" cellpadding="2" class="light">
+    <tbody><tr>
+      <td colspan="4" align="left">
+        <table width="800" border="0" cellspacing="4" cellpadding="2" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF" align="left" name="topbar">
+
+  <tbody><tr> 
+    <td rowspan="2"><a href="http://greengenes.lbl.gov/"><img src="./top2_files/logo_w_sub.png" border="0"></a></td>
+    <td width="20" height="81" bordercolor="#009900" align="left" valign="middle">
+    </td><td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-browse.cgi"><img src="./top2_files/tree_icon_48h_bkGD.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-browse.cgi">
+        <p><font size="1" color="#666666" face="Verdana, Arial, Helvetica, sans-serif">Browse</font></p>
+     </a></div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-export_records.cgi"><img src="./top2_files/exportorange.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-export_records.cgi">
+
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Export</font></p></a>
+      </div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-ali.cgi"><img src="./top2_files/slice_dna.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-ali.cgi">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Slice</font></p>
+     </a></div>
+    </td>
+
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><img src="./top2_files/consensus_bkGD.png" width="48" height="48"></font></p>
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Consensus</font></p>
+      </div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-compare_choices.cgi"><img src="./top2_files/compare_seq.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-compare_choices.cgi">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Compare</font></p>
+</a></div>
+
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-search.cgi"><img src="./top2_files/search.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-search.cgi">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Search</font></p>
+      </a></div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><a href="http://greengenes.lbl.gov/cgi-bin/nph-probe_locator.cgi"><img src="./top2_files/locate2.png" width="54" height="48" border="0"></a></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-probe_locator.cgi">
+
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Probes</font></p>
+      </a></div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><a href="http://greengenes.lbl.gov/cgi-bin/nph-NAST_align.cgi"><img src="./top2_files/align_orange.png" width="48" height="48" border="0"></a></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-NAST_align.cgi">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Align</font></p>
+      </a></div>
+    </td>
+
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-trim_fasta_by_qual.cgi"><img src="./top2_files/trim_all_green.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-trim_fasta_by_qual.cgi">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Trim</font></p>
+      </a></div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/Download/"><img src="./top2_files/download.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/Download/">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">Download</font></p>
+
+      </a></div>
+    </td>
+    <td width="6%" height="81" bordercolor="#009900" align="left" valign="middle"> 
+      <div align="center"> 
+        <p><font color="#666666"><a href="http://greengenes.lbl.gov/cgi-bin/nph-tools_in_development.cgi"><img src="./top2_files/more_tools.png" width="48" height="48" border="0"></a></font></p><a href="http://greengenes.lbl.gov/cgi-bin/nph-tools_in_development.cgi">
+        <p><font color="#666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">More&nbsp;Tools</font></p>
+      </a></div>
+    </td>
+  </tr>
+
+
+</tbody></table>
+
+      </td>
+    </tr>
+
+
+    <tr>
+
+<!-- ######## PUT IMPORTANT MESSAGES HERE TO BE SEEN ON ALL PAGES -->    
+
+
+
+<td valign="top" align="center" rowspan="2">
+
+<table width="122" border="0" cellspacing="0" cellpadding="1" class="dark">
+  <tbody><tr>
+    <td align="left" class="title">
+      <font class="title">Functions</font>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="8" class="light">
+        <tbody><tr>
+          <td>
+            <span class="menuList">
+              
+              <a class="menu" href="./top2_files/top2.html" title="Take me home!">
+              Home</a>
+              <br><br>
+	      
+	      <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-browse.cgi" title="Browse phylogenetic trees"> 
+              Browse</a>
+              <br>
+
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-export_records.cgi" title="Export records from the prokMSA"> 
+              Export</a>
+              <br>
+
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-ali.cgi" title="Specify a Slice (sub-alignment) of the prokMSA to view/download">
+              Slice</a>
+              <br>
+
+             
+              Consensus
+              <br>
+		
+	      <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-compare_choices.cgi" title="Compare sequences against the prokMSA">
+              Compare</a>
+              <br>
+		
+	      <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-search.cgi" title="Search prokMSA annotations"> 
+              Search</a> 
+              <br> 		
+
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-probe_locator.cgi" title="Locate probes, primers, or putative amplicons within the prokMSA">
+              Probe</a>
+              <br>
+              
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-NAST_align.cgi" title="Align a batch of sequences. Find near-neighbors.">
+              Align</a>
+              <br>
+		
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-trim_fasta_by_qual.cgi" title="Trim-away poor quality data from a batch of 
+sequences ">
+              Trim</a>
+              <br>
+
+              <a class="menu" href="http://greengenes.lbl.gov/Download/" title="Download database, presentations, and supplemental data">
+              Download</a>
+              <br>
+		
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-curation_tools.cgi" title="Share your expertise">
+              Curate</a><br>  
+
+	      <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-tools_in_development.cgi" title="More Tools">
+              More Tools...</a>
+              <br>
+	
+            </span>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<br>
+<table width="122" border="0" cellspacing="0" cellpadding="1" class="dark">
+  <tbody><tr>
+    <td align="left" class="title">
+      <font class="title">About</font>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="8" class="light">
+        <tbody><tr>
+          <td>
+            <span class="menuList">
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-citation.cgi">
+              Citation</a>
+              <br>
+	      <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/JD_Tutorial/nph-Tutorial_2Main2.cgi" target="_blank">
+	      Tutorial</a>
+              <br>
+              <a class="menu" href="http://greengenes.lbl.gov/Download/Tutorial/FAQ.htm">
+              FAQ</a>
+	      <br>
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-objectives.cgi">
+              Objectives</a>
+              <br>
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-methods.cgi">
+              Methods</a>
+              <br>
+              <a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-contact.cgi">
+              Contact</a>
+              <br>
+            </span>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+
+
+<br>
+
+
+<table width="122" border="0" cellspacing="0" cellpadding="1" class="dark">
+  <tbody><tr>
+    <td align="left" class="title">
+      <font class="title"><a href="http://greengenes.lbl.gov/cgi-bin/nph-browse.cgi" class="title">My Interest List</a></font>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="8" class="light">
+        <tbody><tr>
+          <td>
+            <span class="smallMenuList">   <br>
+              <a href="http://greengenes.lbl.gov/cgi-bin/nph-empty_interestList.cgi">remove all</a><br>
+	      <a href="http://greengenes.lbl.gov/cgi-bin/nph-collapse_opened.cgi">collapse all</a><br>
+              <a href="http://greengenes.lbl.gov/cgi-bin/nph-show_marked.cgi">show marked</a>
+            </span>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+
+
+
+<table width="122" border="0" cellspacing="0" cellpadding="1" class="dark">
+  <tbody><tr>
+    <td align="left" class="title">
+      <font class="title"><a href="http://greengenes.lbl.gov/cgi-bin/nph-update_taxonomy_with_tree.cgi" class="title">My Taxonomy</a></font>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="8" class="light">
+        <tbody><tr>
+          <td>
+            <span class="smallMenuList"><form method="POST" enctype="multipart/form-data" action="http://greengenes.lbl.gov/cgi-bin/nph-change_taxonomy.cgi"><select name="tree_choice"><option value="RDP">RDP</option><option selected="" value="greengenes">greengenes</option><option value="gg_norm">gg_norm</option><option value="ncbi">ncbi</option><option value="HOMD">HOMD</option><option value="Silva">Silva</option></select><br><input type="SUBMIT" value="Activate"></form>
+              Changing taxonomy will empty My Interest List.
+            
+            </span>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+
+
+</td>
+       <!-- Spacer -->
+      <td rowspan="2">&nbsp;</td>
+
+      <td valign="top" align="left" width="100%">
+     <table width="100%" border="0" cellspacing="0" cellpadding="1">
+                 <tbody><tr> 
+      <td align="left" class="title">
+        <font class="title">greengenes: 16S rDNA data and tools</font>
+      </td> 
+    </tr>
+    <tr> <td> 
+
+<table width="100%" border="0" cellspacing="0" cellpadding="8" class="light">
+        <tbody><tr>
+          <td>
+            <p>
+              </p><blockquote> The greengenes web application provides access to the 2011 version of the greengenes 16S rRNA gene
+              sequence alignment for browsing,
+              blasting, probing, and downloading.&nbsp; The data and tools presented by greengenes can assist the researcher
+              in choosing phylogenetically specific probes, interpreting microarray results, and aligning/annotating novel sequences.&nbsp; 
+              If you are an <a href="http://www.arb-home.de/"><strong>ARB</strong></a> user, you can use greengenes to keep your own local 
+              database current.
+              </blockquote>
+              <br>
+
+              
+              <h3>The May 2013 greengenes taxonomy now available!</h3>
+              <h4>The trees, tables and sequence data organized as described in McDonald et al. ISME J article can all be found in 
+                  <a href="http://greengenes.secondgenome.com/downloads"> one place</a>.</h4><h4>
+	 
+              <br>
+              <br>
+              
+              </h4><h3>News:</h3>
+              
+              <ul>
+                 <li>Search is now possible using new 
+                     <a href="http://greengenes.lbl.gov/cgi-bin/nph-simrank_interface.cgi">Simrank</a>
+                        (developed by Niels Larsen) for similarity searching against the 2011 greengenes sequences.</li>
+                 <li>New <a href="http://greengenes.lbl.gov/cgi-bin/nph-greengenes_ift.cgi">import filter template</a> posted for slurping greengenes exports into ARB. </li>
+                 <li>Looking for Hugenholtz or PHPR taxonomy? It is now the greengenes taxonomy.</li>
+                 <li> Dr. Mike Dyall-Smith has graciously made available his 
+tutorial for <a href="http://www.haloarchaea.com/resources/arb/">installing Arb on MacOSX</a>. Thanks Mike. </li> 
+                 <li>The greengenes taxonomy for the Cyanobacteria is now consistent with <a href="http://www.cyanodb.cz/">cyanoDB</a> using cyanoDB 
+                     type species as a guide to map cyanoDB taxonomy to the greengenes reference 16S tree.</li>
+                 <li> Thanks to Greg Caporaso and Rob Knight for posting 
+                      <a href="http://greengenes.lbl.gov/Download/Sequence_Data/Fasta_data_files/Caporaso_Reference_OTUs/">OTU reference and utility files</a> for use 
+with QIIME software.</li>
+		 <li> The <a href="http://www.reuters.com/article/pressRelease/idUS106389+03-Oct-2008+BW20081003">
+                       Wall Street Journal picks the Berkeley PhyloChip </a>as the top advance in environmental technology of 2008 and 3rd best 
+                       innovation overall. </li>
+		 <li> <a href="http://www.pollutionengineering.com/Articles/Cover_Story/BNP_GUID_9-5-2006_A_10000000000000230691">
+			Pollution Engineering Magazine selects 
+			Berkeley PhyloChip</a> as most likely to aid 
+			pollution control and abatement in the near future.</li> 
+		 <li> The <a href="http://www.lbl.gov/publicinfo/newscenter/pr/2008/TT-RD100.html">Berkeley PhyloChip wins R&amp;D100</a> award as 
+			one of the 100 most significant technological advances of the year. </li>
+	         
+                 <li> Are you the world expert on the taxonomy of a particular phylogenetic lineage? Have you
+                   checked this database and nobody has got it right? 
+                   <a href="http://greengenes.lbl.gov/cgi-bin/nph-propose_group_name.cgi">Tell us!</a> - we will fix it.</li> We thank Jakob Fredslund for developing a tool, 
+                      <a href="http://cgi-www.daimi.au.dk/cgi-chili/gexcellent/front.py">Gexcellent</a>, to 
+                      convert XML trees to Newick format!
+                 <li> We thank <a href="http://www.bacterio.cict.fr/">J.P. Euzéby</a> and Hans Trüper for expert 
+                      <a href="http://greengenes.lbl.gov/cgi-bin/nph-proposed_phylum_names.cgi">etymological advice</a>.</li>
+             </ul>
+         
+             
+        <hr class="orange" noshade="" width="600" align="center">
+            <br>
+            <dl>
+              <dd>
+                 <a href="http://greengenes.lbl.gov/cgi-bin/nph-browse.cgi"><img src="./top2_files/tree_icon_48h_bkGD.png" border="0"></a>
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-browse.cgi">Browse</a></strong> taxonomic tree of your choice and mark nodes.<br><br>
+              
+               </dd><dd>
+                <a href="http://greengenes.lbl.gov/cgi-bin/nph-export_records.cgi"><img src="./top2_files/exportorange.png" border="0"></a>
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-export_records.cgi">Export</a></strong> sequence records of your choice.<br><br>
+              
+               </dd><dd>     
+                <a href="http://greengenes.lbl.gov/cgi-bin/nph-ali.cgi"><img src="./top2_files/slice_dna.png" border="0"></a>
+                Specify a <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-ali.cgi">Slice</a></strong>
+                (sub-alignment) of the prokMSA to view/download.<br><br>
+              
+              </dd><dd>
+                <img src="./top2_files/agt_business_bkGD.png" border="0">
+                Calculate <strong>Consensus</strong> sequences from My Interest List (soon!).<br><br>
+              
+              </dd><dd>
+                <a href="http://greengenes.lbl.gov/cgi-bin/nph-compare_choices.cgi"><img src="./top2_files/search_seq.png" border="0"></a>
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-compare_choices.cgi">Compare</a></strong> my local sequences/probes 
+               against the prokMSA using <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-blast_interface.cgi">BLAST</a></strong> or <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-simrank_interface.cgi">Simrank</a></strong>.<br><br>
+              
+               </dd><dd>
+                <a href="http://greengenes.lbl.gov/cgi-bin/nph-search.cgi"><img src="./top2_files/orangesearch.png" border="0"></a>
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-search.cgi">Search</a></strong> the annotations of the prokMSA.<br><br>
+
+              </dd><dd>
+                 <a href="http://greengenes.lbl.gov/cgi-bin/nph-probe_locator.cgi"><img src="./top2_files/green_strand.png" border="0"></a> 
+                Locate <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-probe_locator.cgi">Probes</a></strong> and primers within the prokMSA using pattern matching.<br><br>
+              
+              </dd><dd>
+                 <a href="http://greengenes.lbl.gov/cgi-bin/nph-NAST_align.cgi"><img src="./top2_files/align.png" border="0"></a> 
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-NAST_align.cgi">Align</a></strong> a few or a few thousand 16S rDNA sequences with the NAST aligner.<br><br>
+              
+              </dd><dd>
+                 <a href="http://greengenes.lbl.gov/cgi-bin/nph-trim_fasta_by_qual.cgi"><img src="./top2_files/trim_all_green.png" border="0"></a> 
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-trim_fasta_by_qual.cgi">Trim</a></strong> a batch of sequences using quality scores.<br><br>
+              
+               </dd><dd>
+                <a href="http://greengenes.lbl.gov/Download/"><img src="./top2_files/download_manager_bkGD.png" border="0"></a>
+                <strong><a class="menu" href="http://greengenes.lbl.gov/Download/">Download</a></strong> alignments, taxonomies, posters, protocols, etc.<br><br>
+              
+              </dd><dd>
+                <a href="http://greengenes.lbl.gov/cgi-bin/nph-tools_in_development.cgi"><img src="./top2_files/more_tools.png" border="0"></a>
+                <strong><a class="menu" href="http://greengenes.lbl.gov/cgi-bin/nph-tools_in_development.cgi">More Tools</a></strong> are being developed and are available for preview.<br><br><br>
+              </dd><dd> 
+            </dd></dl>Infrastructure provided by: 
+	<a href="http://vimss.lbl.gov/" title="Virtual Institute for Microbial Stress and Survival">VIMSS</a> - 
+	<a href="http://www-esd.lbl.gov/CEB/index.html" title="Center for Environmental Biotechnology">CEB</a> - 
+<a href="http://www.jgi.doe.gov/" title="Joint Genome Institute">JGI</a> - 
+<a href="http://www.lbl.gov/" title="Lawrence Berkeley National Laboratory">LBL</a>
+              
+                
+          </td>
+        </tr>
+        
+      </tbody></table>
+ 
+    </td>
+  </tr>
+ 
+        
+</tbody></table>
+
+
+
+
+      </td>
+      <!-- Spacer -->
+      <td rowspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td valign="bottom">
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="1" class="dark">
+  <tbody><tr>
+    <td>
+      <table width="100%" border="0" cellspacing="0" cellpadding="8" class="light">
+        <tbody><tr>
+          <td>
+            <span class="smallMenuList">
+               <li>Last Database Update: October 2, 2011 1:41PM</li><li>1049116 aligned 16S rDNA records &gt;1250nt 
+
+
+            
+          </li></span></td>
+        </tr>
+      </tbody></table>
+
+    </td>
+  </tr>
+</tbody></table>
+
+
+        <br>
+<!-- SiteSearch Google -->
+<form method="GET" action="http://www.google.com/search">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="text" name="q" size="20" maxlength="255" value="">
+<input type="submit" name="btnG" value="Search greengenes site">
+<input type="hidden" name="domains" value="http://greengenes.lbl.gov"><br><input type="hidden" name="sitesearch" value="http://greengenes.lbl.gov">    
+</form> 
+<!-- SiteSearch Google -->
+
+      
+      </td>
+    </tr>
+
+  </tbody></table>
+
+<script src="./top2_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2060163-1";
+urchinTracker();
+</script>
+
+
+</body></html>

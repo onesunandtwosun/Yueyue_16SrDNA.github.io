@@ -1,0 +1,1184 @@
+
+	<!DOCTYPE html>
+	<head>
+	  <meta charset="utf-8">
+	  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	  <link rel='icon' href="src/pics/logo.ico" type='image/x-ico' />
+	  <title>16S rDNA测序分析总结报告</title>
+	  <meta name="keywords" content="" />
+	  <meta name="description" content="" />
+	  <meta name="viewport" content="widtd=device-widtd">        
+	  <link rel="stylesheet" href="src/css/templatemo_main.css">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse" role="navigation"  id="testone1">
+		<div class="navbar-header" style="position:fixed;"  id="testone2">
+			<div class="logo" style="width: 100%;" id="testone3">
+	<div style="float: left;" class="aa"><a href="#1"><img class="logo4"  src="src/pics/button.png" /><img class="logo3"  src="src/pics/logo3.png" /></a></div>	
+			
+			<h1>16S rDNA测序分析总结报告</h1>
+			</div>
+		</div>  
+		</div>
+		<!-- <div class="template-page-wrapper"> -->
+		<div class="navbar-collapse collapse templatemo-sidebar" style="position:fixed;">
+			<ul class="templatemo-sidebar-menu" id="bb" style="height:600px;overflow-y:scroll; border:0px solid;">
+			<li class="active"><a href="#一、项目简介">一、项目简介</a></li>
+			<li class="active"><a href="#二、工作流程">
+			二、工作流程<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+				</a>
+				<ul class="templatemo-submenu">
+					<li><a href="#2.1实验流程">2.1实验流程</a></li>
+					<li><a href="#2.2信息分析流程">2.2信息分析流程</a></li>
+				</ul>
+			</li>
+			<li>
+				<a class="sub_open ch3" href="#三、标准分析">
+				三、标准分析<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+				</a>
+				<ul class="templatemo-submenu">
+					<li><a href="#3.1 有效数据统计">3.1 有效数据统计</a></li>
+					<li><a href="#3.2 ASV特征表">3.2 ASV特征表</a></li>
+					<li><a href="#3.3 ASV分布Venn图">3.3 ASV分布Venn图</a></li>
+					<li><a href="#3.4 Alpha多样性分析">3.4 Alpha多样性分析</a></li>
+					<li><a href="#3.5 Beta多样性分析">3.5 Beta多样性分析</a></li>
+					<li><a href="#3.6 物种分析">3.6 物种分析</a></li>
+					<li><a href="#3.7 显著性差异分析">3.7 显著性差异分析</a></li>
+				</ul>
+			</li>
+			<li>
+				<a class="ch3"  href="#四、高级分析">
+				四、高级分析<div class="pull-right"></div>
+				</a>
+					<a class="sub_open ch4"  href="#4.1 物种组成分析">4.1 物种组成分析<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+					</a>
+					<ul class="templatemo-submenu">
+						<li><a href="#4.1.1 气泡图Bubble_plot">4.1.1 气泡图Bubble plot</a></li>
+						<li><a href="#4.1.2 圈图Circos">4.1.2 圈图Circos</a></li>
+						<li><a href="#4.1.3 桑基图Sankey_plot">4.1.3 桑基图Sankey_plot</a></li>
+						<li><a href="#4.1.4 物种进化树">4.1.4 物种进化树</a></li>
+						<li><a href="#4.1.5 Krona图">4.1.5 Krona图</a></li>
+					</ul>
+					<a class="sub_open ch4"  href="#4.2 biomarker筛选">4.2 biomarker筛选<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+					</a>
+					<ul class="templatemo-submenu">
+						<li><a href="#4.2.1 indicator分析">4.2.1 indicator分析</a></li>
+						<li><a href="#4.2.2  差异分析 LEfSe">4.2.2  差异分析 LEfSe</a></li>
+						<li><a href="#4.2.3 曼哈顿图Manhattan">4.2.3 曼哈顿图Manhattan</a></li>
+						<li><a href="#4.2.4 ROC分析">4.2.4 ROC分析</a></li>
+					</ul>
+					<a class="sub_open ch4"  href="#4.3 相关性分析">4.3 相关性分析<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+					</a>
+					<a class="sub_open ch4"  href="#4.4 功能分析">4.4 功能分析<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+					<ul class="templatemo-submenu">
+						<li><a href="#4.4.1 PICRUSt2功能预测">4.4.1 PICRUSt2功能预测 </a></li>
+						<li><a href="#4.4.2 细菌表型预测BugBase">4.4.2 细菌表型预测BugBase </a></li>
+					</ul>
+					<a class="sub_open ch4"  href="#4.5 环境因子分析">4.5 环境因子分析<div class="pull-right"><img class="ch1" width="10px" src="src/pics/yjt.png" /></div>
+					</a>
+					<ul class="templatemo-submenu">
+						<li><a href="#4.5.1 RDA分析">4.5.1 RDA分析</a></li>
+						<li><a href="#4.5.2 菌群和指标相关性聚类热图">4.5.2 菌群和指标相关性聚类热图</a></li>
+				</ul>
+			</li>
+			<li>
+			</li>
+			<li class="active"><a href="#参考文献">参考文献</a></li>
+			<li class="active"><a href="#附录">附录</a></li>
+			</ul>
+		</div>
+		<div class="templatemo-content-wrapper">
+			<div class="templatemo-content">
+
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+	
+			<div id="sy">
+				<h1 align="center"><b>联川生物16S rDNA测序分析总结报告</b></h1><br/>
+				<h3 align="center"><b>客&nbsp;&nbsp;户：吕琨</b></h3><br/>
+				<h3 align="center"><b>客户单位：哈尔滨医科大学附属第一医院</b></h3><br/>
+				<h3 align="center"><b>项目编码：LC-P20240108083</b></h3><br/>
+				<h3 align="center"><b>项目经理：孙泽鋆</b></h3><br/>
+	
+				<div class="biaoyu">
+				<p class="by"><b>您值得信赖的多组学整合专家</b></p>
+				</div>
+			</div>
+	
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+
+			<div class="copyright_line"> </div>
+			<a name="前言"></a>
+			<h2>前言</h2>
+				<p class="paragraph">首先恭喜您顺利完成16S rDNA项目的测序和分析工作，其次感谢您对联川生物的信任与支持，最后预祝您科研顺利。联川将一如既往竭诚为您服务。</p><br/>
+				<p class="paragraph">我们为您准备了<a href="https://www.omicstudio.cn/doc/1215" target="_blank">报告解读视频</a>帮助您更好的理解您的分析结果，如您对该项目有任何问题可直接与我们联系（support@lc-bio.com)。</p><br/>
+				
+	
+			<a name="一、项目简介"></a>
+			<h2>一、项目简介</h2>
+				<p class="paragraph">16S rDNA是一种对特定环境（或者特定生境）样品中所有的细菌进行高通量测序，以研究环境样品中微生物群体的组成，解读微生物群体的多样性、丰富度及群体结构，探究微生物与环境或宿主之间的关系的技术。传统的微生物研究依赖于实验室培养，16S扩增子等高通量测序的兴起填补了对无法在传统实验室中培养的微生物的研究空白，扩展了对微生物资源的利用空间，为研究微生物相互作用提供了有效工具。</p><br/>
+				<p class="paragraph">16S rDNA位于原核细胞核糖体小亚基上，指的是基因组中编码核糖体16S rDNA分子对应的DNA序列，也就是16S rDNA的编码基因。该基因全长约1542bp，由9个可变区和10个保守区组成（可变区为V1到V9），其中保守区反映了生物物种间的亲缘关系，而可变区则表明物种间的差异，且变异程度与细菌的系统发育密切相关，被认为是最适于细菌系统发育和分类鉴定的指标。</p><br/>
+				<center>
+				<p class="text-center"><a title="细菌16S区域" href="src/pics/xijun16Squyu.png" class="img-toggle"><img src="src/pics/xijun16Squyu.png" alt="xijun16Squyu.png" class="img-width-max" />
+				</center></br>
+				</a></p>
+				</center>
+				<p class="chart">图 细菌16S区域</p>
+				<p class="paragraph"></p>
+	
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+	
+			<div class="copyright_line"> </div>
+			<a name="二、工作流程"></a>
+			<h2>二、工作流程</h2>
+	
+				<a name="2.1 实验流程" ></a>
+				<h3>2.1 实验流程</h3>
+				<br/>
+				<p class="paragraph">
+				为了从源头上保证测序数据的准确可靠性，我们从DNA提取到上机测序，都有严谨、可靠的样本检测、质控流程，在每一环节都对样本质量严格控制，确保测序数据的真实可信。</p>
+				<center>
+				<p class="text-center"><a title="16S rDNA实验流程" href="src/pics/shiyanliucheng.png" class="img-toggle"><img src="src/pics/shiyanliucheng.png" alt="shiyanliucheng.png" class="img-width-max" /></a></p>
+				</center></br>
+				<p class="chart">图 16S rDNA实验流程</p>
+				<a name=返回主报告信息分析流程 ></a>
+				<a name="2.2 信息分析流程" ></a>
+				<h3>2.2 信息分析流程</h3>
+				<br/>
+				<p class="paragraph">
+				上机测序完成后，我们得到原始的下机数据RawData，利用overlap将双端数据进行拼接，并进行质控、嵌合体过滤，获得高质量的CleanData。DADA2（Divisive Amplicon Denoising Algorithm）[1]不再以序列相似度进行聚类，而是通过“去重复”（Dereplication，相当于以100%相似度聚类）等步骤，进而获得单碱基精度的代表序列，大大提升了数据精确度与物种分辨率。DADA2的核心是去噪，然后使用ASVs (Amplicon Sequence Variants)的概念构建类OTU( Operational Taxonomic Units )[3]表，获得最终的ASV特征表以及特征序列，进一步进行多样性分析、物种分类注释和差异分析等。</p>
+				<center>
+				<class="text-center"><a title="16S rDNA信息分析流程" href="src/pics/bioinfo_workflow.png" class="img-toggle"><img src="src/pics/bioinfo_workflow.png" alt="bioinfo_workflow.png" class="img-width-max-chcc15" /></a>
+				</center>
+				<center>
+
+				</center></br>
+				<p class="chart">图 16S rDNA信息分析流程</p><br/>
+	
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+	
+			<div class="copyright_line"> </div>
+			<a name="三、标准分析"></a>
+			<h2>三、标准分析</h2>
+				<a name="3.1 有效数据统计"></a>
+				<h3>3.1 有效数据统计</h3>
+				<br/>
+				<p class="paragraph">对原始下机数据进行双端拼接、质量控制、嵌合体过滤后，进行高质量数据统计，结果如下表：</p><br/>
+				<p class="chart">表1 有效数据统计表</p>
+				<br/>
+				<div class="mm"  style="height:390px;overflow-y:scroll; border:0px solid;">
+	<table align="center" width="80%" height="390px" frame="hsides" rules="groups" ><tr align="center" style="border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1";><td><b>Sample</b></td><td><b>Raw_Tags</b></td><td><b>Raw_Bases</b></td><td><b>Valid_Tags</b></td><td><b>Valid_Bases</b></td><td><b>Valid%</b></td><td><b>Q20%</b></td><td><b>Q30%</b></td><td><b>GC%</b></td></tr>
+<tr align="center"><td>G9</td><td>84444</td><td>42.22M</td><td>74025</td><td>30.74M</td><td>87.66</td><td>97.63</td><td>93.54</td><td>53.72</td></tr>
+<tr align="center"><td>G7</td><td>86121</td><td>43.06M</td><td>74950</td><td>31.11M</td><td>87.03</td><td>97.54</td><td>93.30</td><td>53.43</td></tr>
+<tr align="center"><td>G6</td><td>83867</td><td>41.93M</td><td>71593</td><td>29.82M</td><td>85.36</td><td>97.64</td><td>93.52</td><td>52.84</td></tr>
+<tr align="center"><td>G5</td><td>83401</td><td>41.70M</td><td>75065</td><td>31.48M</td><td>90.00</td><td>97.00</td><td>91.76</td><td>54.93</td></tr>
+<tr align="center"><td>G3</td><td>82417</td><td>41.21M</td><td>74999</td><td>31.53M</td><td>91.00</td><td>97.31</td><td>92.48</td><td>54.88</td></tr>
+<tr align="center"><td>G2</td><td>83973</td><td>41.99M</td><td>72714</td><td>30.15M</td><td>86.59</td><td>97.66</td><td>93.70</td><td>54.15</td></tr>
+<tr align="center"><td>B12</td><td>81522</td><td>40.76M</td><td>70924</td><td>29.06M</td><td>87.00</td><td>97.75</td><td>93.80</td><td>54.49</td></tr>
+<tr align="center"><td>B11</td><td>81862</td><td>40.93M</td><td>72313</td><td>30.19M</td><td>88.34</td><td>96.91</td><td>91.57</td><td>54.28</td></tr>
+<tr align="center"><td>B10</td><td>85427</td><td>42.71M</td><td>74009</td><td>30.12M</td><td>86.63</td><td>97.76</td><td>93.92</td><td>54.08</td></tr>
+<tr align="center"><td>B9</td><td>80619</td><td>40.31M</td><td>69975</td><td>28.77M</td><td>86.80</td><td>97.68</td><td>93.61</td><td>53.90</td></tr>
+<tr align="center"><td>B4</td><td>83101</td><td>41.55M</td><td>71251</td><td>29.26M</td><td>85.74</td><td>97.84</td><td>93.95</td><td>54.20</td></tr>
+<tr align="center"><td>B1</td><td>83604</td><td>41.80M</td><td>73178</td><td>30.01M</td><td>87.53</td><td>97.41</td><td>92.74</td><td>54.42</td></tr>
+<tr align="center"><td>A9</td><td>85196</td><td>42.60M</td><td>74359</td><td>31.04M</td><td>87.28</td><td>96.99</td><td>91.56</td><td>53.54</td></tr>
+<tr align="center"><td>A8</td><td>87649</td><td>43.82M</td><td>75871</td><td>31.20M</td><td>86.56</td><td>97.78</td><td>93.86</td><td>53.12</td></tr>
+<tr align="center"><td>A7</td><td>82641</td><td>41.32M</td><td>72030</td><td>29.45M</td><td>87.16</td><td>97.78</td><td>93.85</td><td>54.21</td></tr>
+<tr align="center"><td>A10</td><td>84026</td><td>42.01M</td><td>74984</td><td>31.21M</td><td>89.24</td><td>96.98</td><td>91.64</td><td>54.28</td></tr>
+<tr align="center"><td>A2</td><td>87588</td><td>43.79M</td><td>76474</td><td>31.57M</td><td>87.31</td><td>97.74</td><td>93.66</td><td>53.98</td></tr>
+<tr align="center"><td>A1</td><td>82764</td><td>41.38M</td><td>75338</td><td>31.16M</td><td>91.03</td><td>97.67</td><td>93.54</td><td>53.20</td></tr>
+</table>
+			
+				</div>
+				<br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/2_clean_data/LU:KUN_clean_data_stat.xlsx</p><br/>
+				<p class="paragraph2"><b>各列意义如下:</b></p><br/>
+				<table align="center" width="80%" height="210px" frame="hsides" rules="groups">
+				<tr align="center" style="border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1";>
+				<th><b>Term</b></th>
+				<th><b>意义</b></th>
+				</tr>
+				<tr>
+				<td>Sample</td>
+				<td>测序样品名称</td>
+				</tr>
+				<tr>
+				<td>Raw_tags</td>
+				<td>测序原始数据，以四行为一个单位，统计每个文件的测序序列个数</td>
+				</tr>
+				<tr>
+				<td>Raw_Bases</td>
+				<td>测序序列的个数乘以测序序列的长度，并以单位M表示</td>
+				</tr>
+				<tr>
+				<td>Valid_Tags</td>
+				<td>预处理后，以四行为一个单位，统计每个文件的拼接后测序序列个数</td>
+				</tr>
+				<tr>
+				<td>Valid_Bases</td>
+				<td>预处理后，测序序列的个数乘以测序序列的长度，并以单位M表示</td>
+				</tr>
+				<tr>
+				<td>Valid%</td>
+				<td>有效数据（Valid）与原始数据（Raw）比值，百分比表示</td>
+				</tr>
+				<tr>
+				<td>Q20%</td>
+				<td>有效数据中数据质量≥Q20的数据比例</td>
+				</tr>
+				<tr>
+				<td>Q30%</td>
+				<td>有效数据中数据质量≥Q30的数据比例</td>
+				</tr>
+				<tr>
+				<td>GC%</td>
+				<td>有效数据中数据GC含量</td>
+				</tr>
+				</table>
+				<br/>
+				<a name="返回主报告ASV特征表"></a>
+				<a name="3.2 ASV特征表"></a>
+				<h3>3.2 ASV特征表</h3>
+				<br/>
+				<p class="paragraph">QIIME2[2]相对于QIIME，最大的改变是DADA2不再以序列相似程度进行聚类，而是通过过滤、去重（Dereplication）、嵌合体过滤等方式修正扩增子的测序错误，确定更多的真实变异。扩增子测序本身就具有内在的限制，但是聚类OTU的方式进一步限制了它的发展。OTU不是物种，它们不应该成为错误的一部分。经过去除背景噪音获得的特征表和特征序列，不仅极大提升了数据精确度与物种分辨率，还保证了结果可信程度。</p><br/>
+				<p class="chart">表2 各样品ASV特征序列统计结果</p><br/>
+				<div class="mm"  style="height:390px;overflow-y:scroll; border:0px solid;">
+			
+	<table align="center" width="80%" height="360px" frame="hsides" rules="groups" ><tr align="center" style="border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1";><td><b>ASV ID</b></td><td><b>G9</b></td><td><b>G7</b></td><td><b>G6</b></td><td><b>G5</b></td><td><b>G3</b></td><td><b>G2</b></td><td><b>B12</b></td><td><b>B11</b></td><td><b>B10</b></td><td><b>B9</b></td><td><b>B4</b></td><td><b>B1</b></td><td><b>A9</b></td><td><b>A8</b></td><td><b>A7</b></td><td><b>A10</b></td><td><b>A2</b></td><td><b>A1</b></td></tr>
+<tr align="center"><td>3ac84b6124eda7da52349f8a82ebe953</td><td>4582.00</td><td>4469.00</td><td>62.00</td><td>66.00</td><td>203.00</td><td>61.00</td><td>11986.00</td><td>972.00</td><td>9283.00</td><td>3049.00</td><td>4612.00</td><td>8996.00</td><td>754.00</td><td>1971.00</td><td>9940.00</td><td>943.00</td><td>4749.00</td><td>4598.00</td></tr>
+<tr align="center"><td>4b38473099dc5f18b73be535e282921a</td><td>6627.00</td><td>10369.00</td><td>7536.00</td><td>703.00</td><td>733.00</td><td>492.00</td><td>485.00</td><td>3323.00</td><td>175.00</td><td>395.00</td><td>634.00</td><td>364.00</td><td>6929.00</td><td>753.00</td><td>1455.00</td><td>1807.00</td><td>1183.00</td><td>11698.00</td></tr>
+<tr align="center"><td>2786a3936afe203732ef84ecfbf42f7b</td><td>4538.00</td><td>4915.00</td><td>183.00</td><td>2693.00</td><td>1818.00</td><td>4125.00</td><td>577.00</td><td>1255.00</td><td>399.00</td><td>3158.00</td><td>1443.00</td><td>2042.00</td><td>3243.00</td><td>2228.00</td><td>1121.00</td><td>4420.00</td><td>3429.00</td><td>541.00</td></tr>
+<tr align="center"><td>60eb320de124ef3f4b11a7626ce0abf5</td><td>2902.00</td><td>1624.00</td><td>75.00</td><td>73.00</td><td>257.00</td><td>777.00</td><td>43.00</td><td>61.00</td><td>2781.00</td><td>211.00</td><td>2703.00</td><td>384.00</td><td>97.00</td><td>11484.00</td><td>224.00</td><td>484.00</td><td>379.00</td><td>1022.00</td></tr>
+<tr align="center"><td>0efcbd171f35162777500721a618080c</td><td>490.00</td><td>1784.00</td><td>597.00</td><td>4226.00</td><td>10219.00</td><td>1482.00</td><td>47.00</td><td>1199.00</td><td>96.00</td><td>69.00</td><td>65.00</td><td>73.00</td><td>0.00</td><td>0.00</td><td>29.00</td><td>17.00</td><td>0.00</td><td>0.00</td></tr>
+<tr align="center"><td>2d2a2eada828b71bdf9cbb11982ce24a</td><td>0.00</td><td>0.00</td><td>25.00</td><td>22.00</td><td>7.00</td><td>11.00</td><td>3594.00</td><td>18.00</td><td>1594.00</td><td>2554.00</td><td>2840.00</td><td>2204.00</td><td>1188.00</td><td>389.00</td><td>1671.00</td><td>962.00</td><td>1038.00</td><td>910.00</td></tr>
+<tr align="center"><td>a5eef8793ddf5fb4b141fbd69429e7c5</td><td>460.00</td><td>1159.00</td><td>642.00</td><td>6616.00</td><td>7149.00</td><td>1550.00</td><td>0.00</td><td>624.00</td><td>54.00</td><td>46.00</td><td>40.00</td><td>39.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td></tr>
+<tr align="center"><td>ef97d79b77b357b4efe61b0a31153be2</td><td>2781.00</td><td>609.00</td><td>2718.00</td><td>665.00</td><td>1024.00</td><td>1194.00</td><td>329.00</td><td>4912.00</td><td>42.00</td><td>351.00</td><td>227.00</td><td>802.00</td><td>374.00</td><td>226.00</td><td>180.00</td><td>516.00</td><td>417.00</td><td>18.00</td></tr>
+<tr align="center"><td>29d41f7724da8f39aa8dcdf8104add95</td><td>308.00</td><td>378.00</td><td>454.00</td><td>6435.00</td><td>3120.00</td><td>1185.00</td><td>94.00</td><td>1856.00</td><td>144.00</td><td>90.00</td><td>143.00</td><td>126.00</td><td>550.00</td><td>467.00</td><td>99.00</td><td>948.00</td><td>826.00</td><td>44.00</td></tr>
+<tr align="center"><td>648b1c408f44c48f81fcb16b8433f79d</td><td>571.00</td><td>168.00</td><td>849.00</td><td>568.00</td><td>258.00</td><td>1514.00</td><td>2839.00</td><td>749.00</td><td>1626.00</td><td>503.00</td><td>3699.00</td><td>2742.00</td><td>43.00</td><td>21.00</td><td>22.00</td><td>28.00</td><td>151.00</td><td>66.00</td></tr>
+</table>
+			
+				</div>
+				<br/>
+				<p class="paragraph">结果说明：其中ASV ID表示QIIME2降噪后ASV特征序列的ID，它们是无序且无意义的字符串。其中的数值表示每个样本对应的该特征序列的count数。由于不同样本的原始测序量并非完全一致，因此不是简单来看数值的大小来比较丰度的高低，而是需要通过相对丰度的计算来比较不同特征值之间的差异。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/3_ASV_profiling/1_ASV_tables/ASV_table.xlsx</p><br/>
+		
+				<a name="返回主报告ASV分布Venn图"></a>
+				<a name="3.3 ASV分布Venn图"></a>
+				<h3>3.3 ASV分布Venn图</h4><br/>
+				<p class="paragraph">根据获得的ASV丰度表，通过Venn图直观地呈现各样品/分组共有和特有的ASV数目。</p>
+				<p class="paragraph"></p>
+				<div class="border4" >
+					<center>
+					<p class="text-center"><a title="Venn图" href="src/summary_part/3_ASV_profiling/2_venn_diagrams/venn_diagram_Group_B_vs_A.png" class="img-toggle"><img src="src/summary_part/3_ASV_profiling/2_venn_diagrams/venn_diagram_Group_B_vs_A.png" alt="Venn图" class="img-width-max-middle5" /></a></p>
+					</center>
+				<p class="chart">图 Venn图</p><br/>
+				<p class="paragraph">结果说明：venn图中每个圈代表一个样本/分组，圈和圈重叠部数目代表两个组/样本共有的ASV数目，没有重叠的部分代表每个组/样本特有的ASV数目。当样品/分组≥6，我们以花瓣图形式进行展示。它能反映所有样本/分组的共有和特有的ASV数目，但不能反应两两分组间共有的ASV数目。<a href="https://www.omicstudio.cn/tool/6"target="_blank">韦恩图云工具</a>已上线，如有需要欢迎使用。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/3_ASV_profiling/2_venn_diagrams</p><br />
+				<p class="paragraph2"><b>作图数据路径：</b>summary/3_ASV_profiling/1_ASV_tables/ASV_table.xlsx</p>
+				<br/>
+		
+				<a name="3.4 Alpha多样性分析"></a>
+				<h3>3.4 Alpha多样性分析</h3>
+				<br/>
+				<a name="返回主报告Alpha多样性分析"></a>
+				<p class="paragraph">Alpha多样性是指一个特定环境或生态系统内的多样性，主要用来反映物种丰富度和均匀度以及测序深度。Alpha多样性主要通过Chao1、Observed species、Goods_coverage、shannon、Simpson和pielou-e等指数来反映丰富度和均匀性。其中：</p>
+				<p class="paragraph">Chao1和observed_species主要是估计群落中包含物种的数目；</p>
+				<p class="paragraph">Goods _coverage是指微生物覆盖率，其数值越高，则样本中新物种没有被测出的概率越低，该指数实际反映了本次测序结果是否代表样本的真实情况；</p>
+				<p class="paragraph">Shannon指数来源于信息熵，Shannon指数越大，表示不确定性大。不确定性越大，表示这个群落中未知的因素越多，也就是多样性高；</p>
+				<p class="paragraph">Simpson数值范围在0-1之间，当群落里只有一种物种的时候，此时Simpson值最小为0，同时也是我们直观理解的多样性最小。当物种种类无限多（丰富度最高），并且每个物种数目都一致（均匀度最高）的时候，Simpson值为最大为1；</p>
+				<p class="paragraph">pielou-e指数即Shannon’s evenness，仅反映均匀度，数值越大，越均匀。</p><br/>
+				<p class="chart">表3 各样本alpha多样性指数</p>
+				<br/>
+				<div class="mm"  style="height:250px;overflow-y:scroll; border:0px solid;">
+	<table align="center" width="80%" height="390px" frame="hsides" rules="groups" ><tr align="center" style="border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1";><td><b></b></td><td><b>observed_otus</b></td><td><b>shannon</b></td><td><b>simpson</b></td><td><b>chao1</b></td><td><b>goods_coverage</b></td><td><b>pielou_e</b></td></tr>
+<tr align="center"><td>A1</td><td>569</td><td>6.51</td><td>0.96</td><td>569.32</td><td>1.00</td><td>0.71</td></tr>
+<tr align="center"><td>A10</td><td>978</td><td>7.90</td><td>0.99</td><td>978.41</td><td>1.00</td><td>0.80</td></tr>
+<tr align="center"><td>A2</td><td>927</td><td>7.50</td><td>0.98</td><td>927.57</td><td>1.00</td><td>0.76</td></tr>
+<tr align="center"><td>A7</td><td>955</td><td>7.57</td><td>0.97</td><td>955.02</td><td>1.00</td><td>0.76</td></tr>
+<tr align="center"><td>A8</td><td>917</td><td>7.18</td><td>0.97</td><td>917.32</td><td>1.00</td><td>0.73</td></tr>
+<tr align="center"><td>A9</td><td>886</td><td>7.46</td><td>0.98</td><td>886.28</td><td>1.00</td><td>0.76</td></tr>
+<tr align="center"><td>B1</td><td>854</td><td>7.33</td><td>0.97</td><td>854.02</td><td>1.00</td><td>0.75</td></tr>
+<tr align="center"><td>B10</td><td>919</td><td>7.46</td><td>0.97</td><td>919.49</td><td>1.00</td><td>0.76</td></tr>
+<tr align="center"><td>B11</td><td>939</td><td>7.57</td><td>0.98</td><td>939.03</td><td>1.00</td><td>0.77</td></tr>
+<tr align="center"><td>B12</td><td>929</td><td>7.02</td><td>0.96</td><td>929.19</td><td>1.00</td><td>0.71</td></tr>
+</table>
+			
+				</div>
+				<br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/4_alpha_diversity/3_alpha_diversity.xlsx</p><br />
+				<p class="paragraph2"><b>统计分析结果路径：</b>summary/4_alpha_diversity/4_alpha_diversity_statistics.xlsx</p><br/>
+				<p class="paragraph">稀释曲线（rarefaction curve）通过模拟重新取样的过程，观察其中物种变化的趋势，估计环境中的物种丰富程度。通过绘制稀释曲线，统计ASV的丰富程度，对比不同样品的稀释曲线就可以直观显示样品间物种多样性的差异。稀释曲线可直接反映测序数据量的合理性，并间接反映样品中物种的丰富程度，当曲线趋向平坦时，说明测序数据量渐进合理，更多的数据量只会产生少量新的物种（ASVs）。</p>
+		
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="chao1.rare" href="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/chao1.rare.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/chao1.rare.png" 
+				</a>
+				</li>
+				<li class="slide"><a title="goods_coverage.rare" href="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/goods_coverage.rare.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/goods_coverage.rare.png" />
+				<li class="slide"><a title="observed_otus.rare" href="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/observed_otus.rare.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/observed_otus.rare.png" />
+				<li class="slide"><a title="shannon.rare" href="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/shannon.rare.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/shannon.rare.png" />
+				<li class="slide"><a title="simpson.rare" href="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/simpson.rare.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/simpson.rare.png" />
+				<li class="slide"><a title="pielou_e.rare" href="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/pielou_e.rare.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/pielou_e.rare.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				<p class="chart">图 稀释曲线结果示意图</p><br/>
+				<p class="paragraph">结果说明：横坐标代表随机抽取的序列数量；纵坐标代表抽取相同序列数时各样本各指数大小。我们同时按照所有样本和按照分组进行绘图。通过该图，可以在一定程度上衡量每个样本的丰富度和多样性高低。从稀释曲线中我们也可以估算测序数据量是否足够，是一个参考性指标。若曲线急剧上升，表明测序数据量并未达到最佳；若曲线趋于平缓，则证明测序数据量已饱和。</p><br/>
+				<p class="paragraph2"><b>按照分组绘图结果见：</b>summary/4_alpha_diversity/1_rarefaction_curves/Group/*.rare.pdf</p><br/>
+				<p class="paragraph2"><b>按照样本绘图结果见：</b>summary/4_alpha_diversity/1_rarefaction_curves/All/*.rare.pdf</p><br/>
+	
+				<p class="paragraph">如果您的结果中包含生物学重复，且组内重复数目≥5，我们在结果中会提供小提琴图，其中左上角的p值是图中所有分组使用秩和检验所得p值，其中两两分组差异显著性会以*表示差异显著，**表示差异极显著，ns表示表示无显著差异。</p><br/>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="alpha_diversity_violin_chao1" href="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_chao1.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_chao1.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="alpha_diversity_violin_goods_coverage" href="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_goods_coverage.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_goods_coverage.png" />
+				<li class="slide"><a title="alpha_diversity_violin_observed_otus" href="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_observed_otus.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_observed_otus.png" />
+				<li class="slide"><a title="alpha_diversity_violin_shannon" href="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_shannon.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_shannon.png" />
+				<li class="slide"><a title="alpha_diversity_violin_simpson" href="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_simpson.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_simpson.png" />
+				<li class="slide"><a title="alpha_diversity_violin_pielou_e" href="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_pielou_e.png" class="img-toggle"><img src="src/summary_part/4_alpha_diversity/2_violin_plot/alpha_diversity_violin_pielou_e.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				<p class="chart">图 小提琴图</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/4_alpha_diversity/2_violin_plot</p><br/>
+				<p class="paragraph2"><b>两两比较差异分析p值结果路径：</b>summary/4_alpha_diversity/2_violin_plot/alpha_diversity_diff.xlsx</p><br/>
+				
+				<p class="paragraph"><b>Tip：</b>如果您想通过箱线图展示，可通过<a href="https://www.omicstudio.cn/tool/1"target="_blank">箱线图云工具</a>重新进行绘制，详细操作指南见<a href="https://www.omicstudio.cn/doc/1171"target="_blank">Alpha 多样性指数绘制箱线图 SOP</a>。
+			
+			<a name="3.5 Beta多样性分析"></a>
+			<h3>3.5 Beta多样性分析</h3>
+			<br/>
+			<a name="返回主报告Beta多样性分析"></a>
+			<p class="paragraph">Beta多样性是指不同环境群落之间的物种差异性。Beta多样性与alpha多样性一起构成了总体多样性或一定环境群落的生物异质性。Beta多样性分析通常由计算环境样品间的距离矩阵开始，该矩阵包含任意两个样品间的距离，主要通过主成分分析（Principal component analysis，PCA）、主坐标分析（Principal coordinates analysis，PCoA）、聚类分析（Clustering analysis，UPGMA）、非度量多维尺度分析（Nonmetric Multidimensional Scaling，NMDS）、相似性分析（Analysis of similarities，ANOSIM）、多元方差分析（PermANOVA，又称Adonis)等方法，观察样本之间的差异。</p><br/>		
+			<h4>3.5.1 PCA分析</h4>
+			<br/>
+			<p class="paragraph">主成分分析 (PCA，Principal Component Analysis)，简单来说就是在数据信息丢失最少的原则下，对多特征的数据进行最佳综合简化，即是对高维特征空间进行降维处理。它通过寻找矩阵的线性无关向量实现数据降维，线性无关的向量就称为主成分，第一主成分解释了数据最大部分的方差或波动性。PCA能够提取出最大程度反映样品间差异的两个坐标轴，从而将多维数据的差异反映在二维坐标图上，进而揭示复杂数据背景下的简单规律。基于ASV丰度表，我们使用R软件vegan包进行了PCA分析，如果样品的物种组成越相似，则它们在PCA图中的距离越接近。我们可以通过PCA分析直观看出生物学重复的组内相似性及组间差异是否明显。<a href="https://www.omicstudio.cn/tool/25"target="_blank">PCA云工具</a>已上线，如有需要欢迎使用。</p>
+			<center>
+			<p class="text-center"><a title="样品PCA分析展示" href="src/summary_part/5_beta_diversity/1_PCA_result/PCA.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/1_PCA_result/PCA.png" alt="PCA.png" class="img-width-max-middle5" /></a></p>
+			</center>
+			<p class="chart">图 样品PCA分析展示</p><br/>
+			<p class="paragraph">结果说明：不同颜色代表不同分组，同一个颜色的点代表一个组内的不同样本，同一个分组按照95%置信区间以圈图(每组生物学重复数目≥4)形式展示。两个样品间距离越近，则说明样品之间的微生物组成结构越相似，差异性越小；反之，则说明样品之间的微生物组成结构差异越大。通过该分析可观察样本或分组间的差异。当生物学重复样本距离更近，不同分组组间距离越远，说明处理有效或者说明差异显著，也预示着后期寻找差异菌群结果更趋近于真实情况(背景噪音小)；当所有样本均难以分开，说明该处理对菌群的分布影响甚微；当生物学重复样本距离大于不同分组样本之间的距离，则需要做相应排查，确认取样、寄送或后期处理中样本是否弄混。</p><br/>
+			<p class="paragraph2"><b>完整结果路径：</b>summary/5_beta_diversity/2_PCA_result/PCA.png</p><br/>
+			<p class="paragraph2"><b>作图数据路径：</b>summary/3_ASV_profiling/1_ASV_tables/ASV_table.xlsx</p><br/>
+				
+						<h4>3.5.2 PCoA分析</h4>
+						<br/>
+						<p class="paragraph">主坐标分析PCoA（Principal Coordinates Analysis），是一种与PCA类似的降维排序方法，通过可视化的低维空间（通常是二维）重新排列样品，最大化展示样品之间的关系信息。低维空间的排序轴不具体指代某一个物种，而是虚拟的排序轴，反映样品间物种组成结构差异。该分析基于距离矩阵，通过一系列的特征值和特征向量排序后，排序第一的为最主要的特征值，该特征值能最大程度上解释样品之间的关系分布。在生态学研究中，通常选择前两个（或三个）特征值可视化样品间的关系，样品点之间的距离越近，说明样品之间物种组成结构越相似。因此，PCoA分析将群落结构相似度高的样品聚集在一起，群落结构差异大的样品则会远远分开。</p><br/>
+	
+						<p class="paragraph">PCoA的计算原理虽然与PCA相同，但PCA是基于样品的物种丰度表（欧氏距离）降维排序，而PCoA则是基于距离（任何类型距离）矩阵来排序寻找最佳特征值，因此PCoA更能真实的反映样品之间的关系。我们主要基于unweighted unifrac，weighted unifrac，jaccard和bray_curtis距离矩阵进行分析。<a href="https://www.omicstudio.cn/tool/24"target="_blank">PCoA云工具</a>已上线，如有需要欢迎使用。</p><br/>
+						<b><form id="form6" >
+		<select id="pdf1" onchange="gradeChange()"><option value="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/weighted_unifrac_pcoa_html/index.html">weighted_unifrac_pcoa_html_index.html</option><option value="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/bray_curtis_pcoa_html/index.html">bray_curtis_pcoa_html_index.html</option><option value="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/jaccard_pcoa_html/index.html">jaccard_pcoa_html_index.html</option><option value="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/unweighted_unifrac_pcoa_html/index.html">unweighted_unifrac_pcoa_html_index.html</option></select>
+						</form></b>
+						<center>
+						<iframe class="chcc1" src="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/weighted_unifrac_pcoa_html/index.html"  width="60%"  height="500px" /></iframe>
+						</center></br>
+						<p class="chart">图 <a href="https://www.omicstudio.cn/faq//kindeditor-4.1.10/attached/file/20181220/20181220111110_18253.pdf" target="_blank">PCoA分析3D图</a> </p><br/>
+			
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="weighted_unifrac_pcoa" href="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/weighted_unifrac_pcoa.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/weighted_unifrac_pcoa.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="unweighted_unifrac_pcoa" href="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/unweighted_unifrac_pcoa.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/unweighted_unifrac_pcoa.png" />
+				<li class="slide"><a title="bray_curtis_pcoa" href="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/bray_curtis_pcoa.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/bray_curtis_pcoa.png" />
+				<li class="slide"><a title="jaccard_pcoa" href="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/jaccard_pcoa.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_2D/jaccard_pcoa.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				<p class="chart">图 PCoA 2D图（从左到右依次为weighted_unifrac_pcoa图、unweighted_unifrac_pcoa图、bray_curtis_pcoa图和jaccard_pcoa图）</p><br/>
+				<p class="paragraph">结果说明：和PCA一样，结果中不同颜色代表不同分组，样品距离越近，说明样品之间的微生物组成结构越相似，差异性越小。横纵坐标的百分比表示第一轴和第二轴对样本差异的解释度。</p><br/>
+				<p class="paragraph2"><b>结果路径</b>：summary/5_beta_diversity/2_PCoA_result</p><br/>
+				<p class="paragraph2"><b>作图数据路径</b>：summary/5_beta_diversity/2_PCoA_result/*_distance_matrix.xlsx</p><br/>
+	
+					<h4>3.5.3 样品聚类</h4>
+					<br/>
+					<p class="paragraph">为了适应不同的环境样品类型，基于各样品的ASV分析结果，我们将使用最常用的unweighted unifrac、weighted unifrac[4,5]、jaccard和bray_curtis四个指标来衡量两个样品间的相异系数，其值越小，表示这两个样品在物种多样性方面存在的差异越小。同时计算得到的样品距离矩阵，并利用UPGMA（Unweighted Pair Group Method with Arithmetic Mean）方法对样品进行聚类，生成聚类树数据文件，该文件可以导入聚类树查看软件如<a href="http://tree.bio.ed.ac.uk/software/figtree" target="_blank">Figtree</a>。</p>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="UPGMA层次聚类分析-Weighted_UniFrac结果" href="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_weighted_unifrac_ASV_table_rarefied_62548.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_weighted_unifrac_ASV_table_rarefied_62548.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="UPGMA层次聚类分析-unweighted_UniFrac结果" href="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_unweighted_unifrac_ASV_table_rarefied_62548.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_unweighted_unifrac_ASV_table_rarefied_62548.png" />
+				<li class="slide"><a title="UPGMA层次聚类分析-bray_curtis结果" href="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_bray_curtis_ASV_table_rarefied_62548.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_bray_curtis_ASV_table_rarefied_62548.png" />
+				<li class="slide"><a title="UPGMA层次聚类分析-jaccard结果" href="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_jaccard_ASV_table_rarefied_62548.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/3_upgma_cluster/upgma_jaccard_ASV_table_rarefied_62548.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+			</center></br>
+					<p class="chart">图 UPGMA层次聚类分析（从左到右依次为Weighted_UniFrac结果、unweighted_UniFrac结果、bray_curtis结果和jaccard结果）</p><br/>
+					<p class="paragraph">结果说明：图中树枝不同颜色代表不同的分组。聚类树展现了样本间的相似度，样本间的分枝长度越短，两样本越相似。同时这样的可视化结果可以直观显示不同的环境样本中微生物进化的差异程度。当出现同一个样本离散在同组样本之外，说明这个样本可能组间相似性不高，作为生物学重复可能会影响整个组。</p><br/>
+					<p class="paragraph2"><b>完整结果路径：</b>summary/5_beta_diversity/3_upgma_cluster</p><br/>
+					<p class="paragraph2"><b>作图数据路径：</b>summary/5_beta_diversity/3_upgma_cluster/*_upgma_cluster.tre</p><br/>
+					<h4>3.5.4 NMDS分析图</h4>
+					<br/>
+					<p class="paragraph">NMDS(Nonmetric Multidimensional Scaling)非度量多维尺度分析，与PCoA分析一样，也是一种基于样品（任何类型距离）距离矩阵的排序方法。与PCoA不同的是，NMDS不再基于距离矩阵数值，而是根据距离排位顺序进行降维计算。NMDS排序依赖于相异系数的大小顺序，并不依赖于准确的相异性系数值。如果排序的目的不是在于最大程度保留样品之间的实际距离，只是反映样品之间的顺序关系，这种情况下，非度量多维尺度分析是一种不错的解决方案。NMDS分析目标是保持样品排序关系不变，因此，如果两个样品距离较近，说明这两个样品物种组成越相似。<a href="https://www.omicstudio.cn/tool/23"target="_blank">NMDS云工具</a>已上线，如有需要欢迎使用。</p><br/></p>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="weighted_unifrac_NMDS" href="src/summary_part/5_beta_diversity/4_NMDS_result/weighted_unifrac_NMDS.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/4_NMDS_result/weighted_unifrac_NMDS.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="unweighted_unifrac_NMDS" href="src/summary_part/5_beta_diversity/4_NMDS_result/unweighted_unifrac_NMDS.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/4_NMDS_result/unweighted_unifrac_NMDS.png" />
+				<li class="slide"><a title="bray_curtis_NMDS" href="src/summary_part/5_beta_diversity/4_NMDS_result/bray_curtis_NMDS.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/4_NMDS_result/bray_curtis_NMDS.png" />
+				<li class="slide"><a title="jaccard_NMDS" href="src/summary_part/5_beta_diversity/4_NMDS_result/jaccard_NMDS.png" class="img-toggle"><img src="src/summary_part/5_beta_diversity/4_NMDS_result/jaccard_NMDS.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				<p class="chart">图 NMDS 2D图（从左到右依次为weighted_unifrac_NMDS图、unweighted_unifrac_NMDS图、bray_curtis_NMDS图和jaccard_NMDS图）</p><br/>
+				<p class="paragraph">结果说明：图中的点表示样品，不同颜色样品属于不同的分组，点与点之间的距离表示样品之间差异程度。检验NMDS分析结果的优劣用胁强系数（stress）来衡量，通常认为当stress<0.2时，可用NMDS的二维点图表示，其图形有一定的解释意义；当stress<0.1时，可以认为是一个好的排序；当stress<0.05时，具有很好的代表性。</p></br>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/5_beta_diversity/4_NMDS_result</p><br/>
+				<p class="paragraph2"><b>作图数据路径：</b>summary/5_beta_diversity/4_NMDS_result/*_distance_matrix.xlsx</p><br/>
+	
+				<h4>3.5.5 相似性分析</h4>
+				<br/>
+				<p class="paragraph">Anosim（Analysis of similarities）相似性分析是一种非参数检验，用来检验组间(两组或多组)的差异是否显著大于组内差异，从而判断分组是否有意义。该分析基于unweighted unifrac，weighted unifrac、jaccard和bray_curtis算法得到的样品距离矩阵，通过对样品距离等级排序来判断样品组内和组间差异的大小，并通过置换检验评价原始样品组间差异的统计学显著性。</p><br/>
+				<b><form id="form6" >
+		<select id="pdf9" onchange="gradeChange()"><option value="src/summary_part/5_beta_diversity/5_anosim_result/bray_curtis_anosim_html/index.html">bray_curtis_anosim_html_index.html</option><option value="src/summary_part/5_beta_diversity/5_anosim_result/weighted_unifrac_anosim_html/index.html">weighted_unifrac_anosim_html_index.html</option><option value="src/summary_part/5_beta_diversity/5_anosim_result/unweighted_unifrac_anosim_html/index.html">unweighted_unifrac_anosim_html_index.html</option><option value="src/summary_part/5_beta_diversity/5_anosim_result/jaccard_anosim_html/index.html">jaccard_anosim_html_index.html</option></select>				
+				</form></b><br/><br/>
+				<center>
+				<iframe class="chcc9" src="src/summary_part/5_beta_diversity/5_anosim_result/bray_curtis_anosim_html/index.html"  width="60%"  height="400px" /></iframe>
+				</center></br>
+				<p class="paragraph">结果说明：test statistic即为R值，数值介于-1和1之间，表明组间样品差异与组内样品差异的差值大小。R值越接近1，表明组间样品差异越大，同时组内样品差异越小，分组效果越好；如果R=0，表明样品的分组效果等同于随机分配，各样品分组之间不具有可观测的统计学差异；如果R为负值，则表明组内样品差异超过了组间样品差异，预示样品分组效果较差。P值则反映了ANOSIM分析结果的统计学显著性，P<0.05，表明统计是否具有显著性。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/5_beta_diversity/5_anosim_result/*/index.html</p><br/>
+						
+				<h4>3.5.6 Adonis分析</h4>
+				<br/>
+				<p class="paragraph">Adonis又称置换多元方差分析或非参数多元方差分析。它是通过距离矩阵，分析不同分组因素对样品差异的解释度，并使用置换检验对其统计学意义进行显著性分析。</p><br/>
+				<p class="chart">表3 Adonis多元分析</p><br/>
+				<div class="mm"  style="height:auto;overflow-y:auto; border:0px solid;">
+		<table align="center" width="80%" height="180px" frame="hsides" rules="groups"><tr align="center" style="border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1";><td><b></b></td><td><b>Df</b></td><td><b>SumOfSqs</b></td><td><b>R2</b></td><td><b>F</b></td><td><b>Pr(&gt;F)</b></td></tr>
+<tr align="center"><td>Group</td><td>2</td><td>0.29</td><td>0.24</td><td>2.43</td><td>0.03</td></tr>
+<tr align="center"><td>Residual</td><td>15</td><td>0.89</td><td>0.76</td><td></td><td></td></tr>
+<tr align="center"><td>Total</td><td>17</td><td>1.18</td><td>1</td><td></td><td></td></tr>
+</table>
+
+				</div>
+				<br/>
+				<p class="paragraph">结果说明：以weighted_unifrac距离adonis分析结果为例，其中Df:自由度；SumsOfSqs:总方差，又称离差平方和；Mean Sqs:表示均方（差），即SumsOfSqs/Df；F.Model:F检验值；R2，表示不同分组对样品差异的解释度，即分组方差与总方差的比值，R2越大表示分组对差异的解释度越高；Pr:P值，小于0.05说明本次检验的可性度高。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/5_beta_diversity/6_adonis_result</p><br/>
+				
+				<p class="paragraph"><b>Tip：</b>查看PCA、PCoA、upgma和NMDS的分析结果，当出现同一组样本离散在群体之外，说明这个样本可能组间相似性不高，作为生物学重复可能会影响整个组，因此，建议可以结合下面的物种柱状图结果，对该离群样本进行分析，判断是否需要删除该样本。如果需要剔除离群样本重分析，可使用<a href="https://www.omicstudio.cn/analysis/rnda"target="_blank">云平台-云分析-微生物-扩增子项目重分析</a>进行剔除样本重分析，具体操作步骤详见<a href="https://www.omicstudio.cn/ueditor/php/upload/file/20200605/181%E3%80%90%E6%96%87%E5%AD%97%E7%89%88%E3%80%91%E5%BE%AE%E7%94%9F%E7%89%A9%E5%89%94%E6%A0%B7%E6%9C%AC%E9%87%8D%E5%88%86%E6%9E%90SOP.pdf"target="_blank">操作指南</a>。</p>
+				<p class="paragraph">如您需要按照比较组重新绘图，可使用<a href="https://www.omicstudio.cn/analysis/microbe"target="_blank">云平台-云分析-微生物-扩增子项目重绘图</a>按照比较组进行绘图，具体操作步骤详见<a href="https://www.omicstudio.cn/ueditor/php/upload/file/20200605/720%E3%80%90%E6%96%87%E5%AD%97%E7%89%88%E3%80%91%E5%BE%AE%E7%94%9F%E7%89%A9%E6%89%A9%E5%A2%9E%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BA%91%E5%88%86%E6%9E%90SOP_%E9%87%8D%E7%BB%98%E5%9B%BE%E6%96%B9%E5%90%91_V1.5.pdf"target="_blank">操作指南</a>。</p><br/>
+				
+				<a name="3.6 物种分析"></a>
+				<h3>3.6 物种分析</h3>
+				<br/>
+				<p class="paragraph">ASV特征序列是我们物种分类的原始文件，为了更加准确的分析物种组成，我们使用SILVA（Release 138，<a href="https://www.arb-silva.de/documentation/release-138/"target="_blank">https://www.arb-silva.de/documentation/release-138/</a>）以及NT-16S数据库做物种分类及后续分析，以保证注释结果完整准确。注释阈值：置信度大于0.7。根据ASV注释结果和各样品ASV丰度表，获得界、门、纲、目、科、属、种水平物种丰度表，并针对不同水平物种丰度表进行不同样品（组）物种组成分析。基于物种注释统计表，我们通过柱状堆叠图、热图和聚类图对物种丰度进行展示。</p>
+				<p class="paragraph">物种注释完成后，会统计每个ASV对应的注释结果以及丰度信息。一般在论文中我们会对这部分结果使用大量的讨论，根据不同的实验设计和目的，从中筛选一个或几个重点关注的物种（可以从七个水平上分别查看，其中<b>建议老师可以重点关注门和属物种的变化，这两个水平的研究是最多的,代表性强且分类层级清晰便于比较，易于论文发表</b>），结合ASV丰度信息表分析物种表达水平、聚类分析等。当样品量较大时（比如超过100个样品），导致样品柱状图十分拥挤，降低了图形的美观和可读性，建议按分组（分组物种丰度为组内样品平均相对丰度）图形进行展示。</p> <br/>
+				<p class="chart">表4 ASV表达量注释表结果</p><br/>
+				<div class="mm"  style="height:360px;overflow-y:scroll; border:0px solid;">
+	<table align="center" width="80%" height="360px" frame="hsides" rules="groups" ><tr align="center" style="border-bottom: 2px solid #c1c1c1;border-top: 2px solid #c1c1c1";><td><b>ASV ID</b></td><td><b>Domain</b></td><td><b>Phylum</b></td><td><b>Class</b></td><td><b>Order</b></td><td><b>Family</b></td><td><b>Genus</b></td><td><b>Species</b></td></tr>
+<tr align="center"><td>feb0ec5965da3eb0647703ad438b93ff</td><td>d__Bacteria</td><td>p__Bacteroidota</td><td>c__Bacteroidia</td><td>o__Bacteroidales</td><td>f__Prevotellaceae</td><td>g__Prevotella</td><td>s__Prevotella_unclassified</td></tr>
+<tr align="center"><td>6eefd0b3605628d3312cd28a64bf4d3e</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Clostridia_UCG-014</td><td>f__Clostridia_UCG-014_unclassified</td><td>g__Clostridia_UCG-014_unclassified</td><td>s__Clostridia_UCG-014_unclassified</td></tr>
+<tr align="center"><td>99ec00cc6f50994bf625199966d3de40</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Clostridiales</td><td>f__Lachnospiraceae</td><td>g__Lachnoclostridium</td><td>s__Lachnoclostridium_sp.</td></tr>
+<tr align="center"><td>594118befc0fcb0f96e85c7d99cf28b6</td><td>d__Bacteria</td><td>p__Proteobacteria</td><td>c__Gammaproteobacteria</td><td>o__Pseudomonadales</td><td>f__Moraxellaceae</td><td>g__Acinetobacter</td><td>s__Acinetobacter_sp._SL003A-18A1</td></tr>
+<tr align="center"><td>6aba0bee4408a6f63134e6e9bca15d2d</td><td>d__Bacteria</td><td>p__Gemmatimonadota</td><td>c__S0134_terrestrial_group</td><td>o__S0134_terrestrial_group_unclassified</td><td>f__S0134_terrestrial_group_unclassified</td><td>g__S0134_terrestrial_group_unclassified</td><td>s__S0134_terrestrial_group_unclassified</td></tr>
+<tr align="center"><td>45f0e1e39010b79ed343b6b8fc869a75</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Clostridiales</td><td>f__Lachnospiraceae</td><td>g__Eisenbergiella</td><td>s__Eisenbergiella_sp.</td></tr>
+<tr align="center"><td>d0ab4f0e96d8747607541c8fb95aee45</td><td>d__Bacteria</td><td>p__Bacteroidota</td><td>c__Bacteroidia</td><td>o__Bacteroidales</td><td>f__Muribaculaceae</td><td>g__Muribaculaceae_unclassified</td><td>s__Muribaculaceae_unclassified</td></tr>
+<tr align="center"><td>15c0f059cc16172d0006a99c0e5e923f</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Lachnospirales</td><td>f__Lachnospiraceae</td><td>g__Eubacterium]_oxidoreducens_group</td><td>s__Eubacterium]_oxidoreducens_group_unclassified</td></tr>
+<tr align="center"><td>be0f0885a8670d206fbe0272f8975a41</td><td>d__Bacteria</td><td>p__Bacteroidota</td><td>c__Bacteroidia</td><td>o__Bacteroidales</td><td>f__Prevotellaceae</td><td>g__Prevotella</td><td>s__uncultured_Prevotella_sp.</td></tr>
+<tr align="center"><td>3907b0c605b20de5dead455710a8687b</td><td>d__Bacteria</td><td>p__Bacteroidota</td><td>c__Bacteroidia</td><td>o__Bacteroidales</td><td>f__Muribaculaceae</td><td>g__Muribaculaceae_unclassified</td><td>s__Muribaculaceae_unclassified</td></tr>
+<tr align="center"><td>ba0c764d0b7974c6e1172e9d9a91b333</td><td>d__unclassified</td><td>p__unclassified</td><td>c__unclassified</td><td>o__unclassified</td><td>f__unclassified</td><td>g__unclassified</td><td>s__unclassified</td></tr>
+<tr align="center"><td>5828fc0dd7763cd46efd931fb861e8b5</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Clostridiales</td><td>f__Lachnospiraceae</td><td>g__Lachnospiraceae_unclassified</td><td>s__Lachnospiraceae_unclassified</td></tr>
+<tr align="center"><td>7ff0b5245684b128dece0a64012dc90b</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Oscillospirales</td><td>f__Ruminococcaceae</td><td>g__Ruminococcaceae_unclassified</td><td>s__Ruminococcaceae_unclassified</td></tr>
+<tr align="center"><td>e0d39ad52b9a184a319fde9155228b1a</td><td>d__unclassified</td><td>p__unclassified</td><td>c__unclassified</td><td>o__unclassified</td><td>f__unclassified</td><td>g__unclassified</td><td>s__unclassified</td></tr>
+<tr align="center"><td>6e0e41d8b69fded2ba5eaeff0bcad870</td><td>d__Bacteria</td><td>p__Actinobacteriota</td><td>c__Coriobacteriia</td><td>o__Coriobacteriales</td><td>f__Eggerthellaceae</td><td>g__Enterorhabdus</td><td>s__Enterorhabdus_unclassified</td></tr>
+<tr align="center"><td>72452423891924f0b76bbeac68fcb217</td><td>d__Bacteria</td><td>p__Desulfobacterota</td><td>c__Desulfovibrionia</td><td>o__Desulfovibrionales</td><td>f__Desulfovibrionaceae</td><td>g__Desulfovibrio</td><td>s__Desulfovibrio_unclassified</td></tr>
+<tr align="center"><td>9572a0fb0c1bce75ac19fa04404cb250</td><td>d__unclassified</td><td>p__unclassified</td><td>c__unclassified</td><td>o__unclassified</td><td>f__unclassified</td><td>g__unclassified</td><td>s__unclassified</td></tr>
+<tr align="center"><td>bac0c74052e7e29b447ad28f9394f5e6</td><td>d__Bacteria</td><td>p__Bacteroidota</td><td>c__Bacteroidia</td><td>o__Bacteroidales</td><td>f__Muribaculaceae</td><td>g__Duncaniella</td><td>s__Duncaniella_muris</td></tr>
+<tr align="center"><td>787aa0c4360214fe6509c13cdc6cb695</td><td>d__Bacteria</td><td>p__Firmicutes</td><td>c__Clostridia</td><td>o__Clostridiales</td><td>f__Clostridiales_unclassified</td><td>g__Clostridiales_unclassified</td><td>s__Clostridiales_unclassified</td></tr>
+<tr align="center"><td>0dc0f37c198ea47125d1cab168a7b0ba</td><td>d__Bacteria</td><td>p__Bacteroidota</td><td>c__Bacteroidia</td><td>o__Bacteroidales</td><td>f__Muribaculaceae</td><td>g__Muribaculaceae_unclassified</td><td>s__Muribaculaceae_unclassified</td></tr>
+</table>
+			
+				</div>
+				<br/>
+				<p class="paragraph">结果说明：该表代表每个特征值对应的界、门、纲、目、科、属、种不同层级的物种注释结果。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/6_taxonomy_community/ASV_taxonomy_split.xlsx</p><br/>
+				<p class="paragraph2"><b>各样本7个层级的物种数量统计结果见：</b>summary/6_taxonomy_community/ASV_taxonomy_stat.xlsx</p><br/>
+				<a name="3.6.1 柱状堆叠图(stacked bar chart)"></a>
+				<h4>3.6.1 柱状堆叠图(stacked bar chart)</h4>
+				<br/>
+				
+				<p class="paragraph">根据物种丰度表和物种注释表，我们默认选取<b>丰度TOP30</b>物种分类，将每个样本/分组的相对丰度进行不同形式的展示。该柱状图以堆叠柱状图形式展现,便于更直观地进行样品丰度的比较。在各个层级中，我们可以直观的看到优势菌种的表达情况，及在各个不同处理中的变化趋势。当然，若是有关注稀有菌群的表达情况时，我们可以展现所有物种分类。<a href="https://www.omicstudio.cn/tool/17"target="_blank">柱状堆叠图</a>云工具已上线， 如有需要欢迎使用</a>。</p>
+				<b><form id="form" >
+	
+			</form></b><br/>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="分组柱状图分析图-门水平" href="src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_stacked_bar.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_stacked_bar.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="分组柱状图分析图-纲水平" href="src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_stacked_bar.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_stacked_bar.png" />
+				<li class="slide"><a title="分组柱状图分析图-目水平" href="src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_stacked_bar.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_stacked_bar.png" />
+				<li class="slide"><a title="分组柱状图分析图-科水平" href="src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_stacked_bar.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_stacked_bar.png" />
+				<li class="slide"><a title="分组柱状图分析图-属水平" href="src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_stacked_bar.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_stacked_bar.png" />
+				<li class="slide"><a title="分组柱状图分析图-种水平" href="src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_stacked_bar.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_stacked_bar.png" />
+				</a>
+				</li>
+				</ul>
+				</div>			
+			<p class="chart">图 分组堆叠柱状图</p>
+			<p class="paragraph">结果说明：图中横轴为样品名称/分组，纵轴代表某分类的相对丰度；不同颜色对应同一层次不同物种，通过柱状图可以明了每个样本/分组高表达物种组成，同时也可以观察组内物种组成及表达和组间物种表达趋势。</p></br>
+			<p class="paragraph2"><b>按照分组绘图结果见：</b>summary/6_taxonomy_community/*/Group/*_abund_Group_stacked_bar.png</p><br/>
+			<p class="paragraph2"><b>按照分组作图数据见：</b>summary/6_taxonomy_community/*/Group/*_abund_Group.xlsx</p><br/>
+			<p class="paragraph2"><b>按照样本绘图结果见：</b>summary/6_taxonomy_community/*/All/*_abund_top30_stacked_bar.png</p><br/>
+			<p class="paragraph2"><b>按照样本作图数据见：</b>summary/6_taxonomy_community/*/*_abund_top30.xlsx</p><br/>
+	
+				<a name="3.6.2 热图(heatmap)"></a>
+				<h4>3.6.2 热图(heatmap)</h4>
+				<br/>
+				<p class="paragraph">根据物种相对丰度表，将各分类水平相对<b>丰度TOP30</b>个的群落组成数据根据分类单元的丰度分布或样本间的相似程度加以聚类，根据聚类结果对分类单元和样本分别排序，并通过热图加以呈现。通过聚类，可以将高丰度和低丰度的分类单元加以区分，并以颜色梯度及相似程度来反映多个样品在各分类水平上组成的相似性和差异性。<a href="https://www.omicstudio.cn/tool/4"target="_blank">热图</a>云工具已上线， 如有需要欢迎使用</a>。</p><br/>
+			<b><form id="form" >
+		
+				</form></b>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="分组热图分析-门水平" href="src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_heatmap.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_heatmap.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="样品热图分析-纲水平" href="src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_heatmap.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_heatmap.png" />
+				<li class="slide"><a title="样品热图分析-目水平" href="src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_heatmap.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_heatmap.png" />
+				<li class="slide"><a title="样品热图分析-科水平" href="src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_heatmap.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_heatmap.png" />
+				<li class="slide"><a title="样品热图分析-属水平" href="src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_heatmap.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_heatmap.png" />
+				<li class="slide"><a title="样品热图分析-种水平" href="src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_heatmap.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_heatmap.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				<p class="chart">图 分组热图分析</p><br/>
+				<p class="paragraph">结果说明：每行代表物种，每列代表样本/分组，图中用蓝色到红色的渐变色反映丰度由低到高的变化，越趋近于蓝色，丰度越低，越趋近于红色，丰度越高。该热图经过Z值转化，将同一个菌的表达丰度进行归一化，因此该热图仅能进行横向比较，此时纵向比较已无意义。</p><br/>
+				<p class="paragraph2"><b>按照分组绘图结果（作图数据图同3.6.1）：</b>summary/6_taxonomy_community/*/Group/*_abund_Group_heatmap.png</p><br/>
+				<p class="paragraph2"><b>按照样本绘图结果（作图数据图同3.6.1）：</b>summary/6_taxonomy_community/*/All/*_abund_top30_heatmap.png</p><br/>
+		
+				<a name="3.6.3 聚类图(cluster)"></a>
+				<h4>3.6.3 聚类图(cluster)</h4>
+				<br/>
+				<p class="paragraph">物种组成柱状堆叠图虽然可以直观看到不同样品或分组的物种丰度情况，但是具体样品之间的相似性远近，是无法直接观察到的。为了更细致的研究不同样品间的差异和相似性，在柱状图的基础上，还可以根据样品物种组成距离对样品进行聚类分析。该分析采用Bray-Curtis 距离（系统聚类法中使用最普遍的一个距离指标，主要用于描述样品间的相近程度，距离的大小是进行样品分类的主要依据）进行样品聚类。</p>
+			<b><form id="form" >
+	
+				</form></b><br/><br/>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="分组聚类分析-门水平" href="src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_cluster.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_cluster.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="样品聚类分析-纲水平" href="src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_cluster.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_cluster.png" />
+				<li class="slide"><a title="样品聚类分析-目水平" href="src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_cluster.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_cluster.png" />
+				<li class="slide"><a title="样品聚类分析-科水平" href="src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_cluster.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_cluster.png" />
+				<li class="slide"><a title="样品聚类分析-属水平" href="src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_cluster.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_cluster.png" />
+				<li class="slide"><a title="样品聚类分析-种水平" href="src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_cluster.png" class="img-toggle"><img src="src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_cluster.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				<p class="chart">图 分组聚类分析</p><br/>
+				<p class="paragraph">结果说明：左侧是Bray-Curtis距离聚类树结构，样品聚类越近，分支越短，代表样品/分组物种组成越相似。右侧的是各样品/分组在门水平上的物种相对丰度分布图，所占比例越大表示丰度越高。</p><br/>
+				<p class="paragraph2"><b>按照分组绘图结果（作图数据图同3.6.1）：</b>summary/6_taxonomy_community/*/Group/*_abund_top30_cluster.png</p><br/>
+				<p class="paragraph2"><b>按照样本绘图结果（作图数据图同3.6.1）：</b>summary/6_taxonomy_community/*/All/*_abund_Group_cluster.png</p><br/>
+					
+					<a name="返回主报告显著性差异分析"></a>
+					<a name="3.7 显著性差异分析"></a>
+					<h3>3.7 显著性差异分析</h3>
+					<br/>
+					<p class="paragraph">16S rDNA测序分析主要有以下研究目的：研究某一群体（如健康人肠道菌群）的微生物构成，找出这类群体的微生物共性，从而找到微生物对群体的影响（这类研究通常样品量非常大）；研究不同处理样品（比如疾病与健康，不同肥料土壤）之间的微生物构成差异等。根据样品物种丰度表，采用Fisher's exact test（适用于无生物学重复样品差异比较）、Mann-Whitney U test（适用于有生物学重复两组样品差异比较）、Kruskal-Wallis test（适用于有生物学重复样品的多组之间比较）进行物种差异检验。我们会根据您的实验设计，选择适合的分析方法进行组间显著性差异分析。</p>
+			
+				<div class="border4" >
+					<center>
+					<p class="text-center"><a title="barplot差异分析" href="src/summary_part/7_diff_abundance/6_Genus/Group.B_vs_A/Group.B_vs_A_diff_barplot.png" class="img-toggle"><img src="src/summary_part/7_diff_abundance/6_Genus/Group.B_vs_A/Group.B_vs_A_diff_barplot.png" alt="barplot差异分析" class="img-width-max-chcc15" />
+					</center></br>
+					</a></p>
+					</center>
+					<p class="chart">图 barplot差异分析（以属水平为例）</p>
+				<br/>
+					<p class="paragraph">结果说明：分别对每个层级的所有物种进行差异分析，筛选p值小于0.05的物种中丰度最高的前30物种绘制柱状图。图中横坐标代表差异物种（按照丰度高低从左到右排列），纵坐标为相对丰度，通过柱子的高低可直观的判断每个差异物种在不同分组中的丰度情况。如果您的结果展示的物种较多，图片非常不美观，您可以筛选您重点关注的物种联系我们帮您重新绘图。</p><br/>
+					<p class="paragraph2"><b>完整结果路径：</b>summary/7_diff_abundance/*/*/Group.*_diff_boxplot.png</p><br/>
+					<p class="paragraph2"><b>差异分析结果路径：</b>summary/7_diff_abundance/*/*/Group.*.diff.xlsx</p><br/>
+	
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+
+			<div class="copyright_line"> </div>
+			<a name="四、高级分析"></a>
+			<h2>四、高级分析</h2>
+				<br/>
+				<p class="paragraph"><b>针对不同的研究目的，我们特此更新四大部分高级分析，共包括14个分析内容。对于每个图形，对应文件夹中均含有相应的输入文件，我们根据整理好的输入文件，进行不同形式的展示。</b></p>
+		
+			<a name="4.1 物种组成分析"></a>
+				<h3>4.1 物种组成分析</h3>
+				<br/>
+				<a name="4.1.1 气泡图Bubble plot"></a>
+				<h4>4.1.1气泡图Bubble plot</h4>
+				<br/>
+				<p class="paragraph">气泡图利用气泡的大小和颜色变化，直观反映物种注释与丰度二维矩阵中的数据信息。<a href="https://www.omicstudio.cn/tool/30" target="_blank">气泡图（Bubble Plot）云工具</a>已上线，如您需要欢迎使用。</p>
+				<center>
+				<p class="text-center"><a title="气泡图（Bubble Plot）" href="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/1_Bubble_plot/bubble_plot.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/1_Bubble_plot/bubble_plot.png" alt="bubble_plot.png" class="img-width-max-middle5" />
+				</center>
+				</a></p>
+				</center>
+				<p class="chart">图 气泡图（Bubble Plot）</p><br/>
+				<p class="paragraph">结果说明：图展示了不同的样本分组中属水平的物种注释信息及相对丰度（圈的大小），同时又展示了物种对应的门的物种注释信息（圈的颜色）。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/1_Bubble_plot/bubble_plot.png</p><br/>
+				<p class="paragraph2"><b>作图数据路径：</b>summary/3_ASV_profiling/1_ASV_tables/ASV_table.xlsx和summary/6_taxonomy_community/ASV_taxonomy_split.xlsx</p><br/>
+		
+				<a name="4.1.2 圈图Circos"></a>
+				<h4>4.1.2 圈图Circos</h4>
+				<br/>
+				<p class="paragraph">优势菌群在不同的项目中有不同的定义，在本项目中，考虑到不同图形展示的美观程度，我们展示丰度top5的菌群的分布状况。您可以结合7个层级中1-2个层级的优势菌群进行展示，以满足您发表文章的需求。Circos圈图展示样本与物种的对应关系，反映每个样本组的优势物种组成比例以及各优势物种在不同样本组之间的分布比例。<a href="https://www.omicstudio.cn/tool/50" target="_blank">Circos圈图云工具</a>已上线，如有需要欢迎使用。</p>
+				<center>
+				<p class="text-center"><a title="圈图（Circos）" href="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/2_Circos_plot/2_Phylum/Phylum_Circos_top5.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/2_Circos_plot/2_Phylum/Phylum_Circos_top5.png" alt="Phylum_Circos_top5.png" class="img-width-max-chcc15" />
+				</center>
+				</a></p>
+				</center>
+				<p class="chart">图 圈图（Circos）（以门水平为例）</p><br/>
+				<p class="paragraph">结果说明：左半部分是丰度top5的门以及其对应的丰度信息，右半部分为分组信息，所占宽度越宽，表示丰度越高，相反所占宽度越短，表示丰度越低。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/2_Circos_plot/*/*_Circos_top5.png</p><br/>
+				<p class="paragraph2"><b>作图数据路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/2_Circos_plot/*/Phylum_abund_Group_top5.xlsx</p><br/>
+		
+				<a name="4.1.3 桑基图Sankey_plot"></a>
+				<h4>4.1.3 桑基图Sankey_plot</h4>
+				<br/>
+				<p class="paragraph">桑基图（Sankey plots）用来展示数据的“流动”变化，分支的宽度表示流量的大小。<a href="https://www.omicstudio.cn/tool/40" target="_blank">桑基图（Sankey plots）云工具</a>已上线，如有需要欢迎使用。</p>
+				<center>
+				<p class="text-center"><a title="桑基图（Sankey plots）" href="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/3_Sankey_plot/Sankey_Genus_abund_Phylum.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/3_Sankey_plot/Sankey_Genus_abund_Phylum.png" alt="Sankey_Genus_abund_Phylum.png" class="img-width-max" />
+				</center></br>
+				</a></p>
+				</center></br>
+				<p class="chart">图 桑基图（Sankey plots）</p><br/>
+				<p class="paragraph">结果说明：图中展示了不同样本（左侧）对应的门水平（中间）和属水平（右侧）的菌群相对丰度，直观展示菌群多样性研究中最为关注的两个层级的物种注释信息，对应关系，以及所占比例。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/3_Sankey_plot/Sankey_Genus_abund_Phylum.png</p><br/>
+				<p class="paragraph2"><b>作图数据路径：</b>summary/6_taxonomy_community/ASV_table_with_taxonomy.xlsx</p><br/>
+		
+				<a name="4.1.4 物种进化树"></a>
+				<h4>4.1.4 物种进化树</h4>
+				<br/>
+				<p class="paragraph">在微生态研究中，往往需要研究特定生态系统（环境）中微生物间的系统进化关系。序列进化关系基本原理是从一条序列转化另一条序列所需要的变换越多，这两条序列之间的相关性就越小，从共同祖先开始发生分歧的时间就越早，两者之间的进化距离就越大。构建物种进化树过程是十分简单的，根据ASVs特征序列的多序列比对结果构建ASV特征序列进化树。</p>
+				<center>
+				<p class="text-center"><a title="物种进化树" href="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/4_Genus_phylotree/genus_phylotree.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/4_Genus_phylotree/genus_phylotree.png" alt="genus_phylotree.png" class="img-width-max" />
+				</center>
+				</a></p>
+				</center>
+	
+		<p class="chart">图 <a href="https://www.omicstudio.cn/faq//kindeditor-4.1.10/attached/file/20181220/20181220105053_50677.pdf" target="_blank">物种进化树</a></p><br/>
+		<p class="paragraph">结果说明：我们默认挑选<b>丰度top50</b>的属水平物种进行绘图，图中不同分支代表不同属水平分类，不同属但是相同颜色，表示它们属于同一个门，两个物种距离越近表明他们之间的进化关系越近，可以直观的发现重点研究物种的发生关系及其生物学意义。</p><br/>
+		<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/4_Genus_phylotree/genus_phylotree.png</p><br/>
+		<p class="paragraph2"><b>作图数据路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/genus_rep_seqs_filtered_aligned.tre</p><br/>
+
+				<a name="4.1.5 Krona图"></a>
+				<h4>4.1.5 Krona图</h4>
+				<br/>
+				<p class="paragraph">为了更直观展示各样品在不同分类水平（界门纲目科属种）的丰度情况，我们利用Krona[6]软件对单样品物种注释结果及丰度进行动态可视化展示。该网页文件对样品物种分类学组成进行交互展示，扇形的大小反映了不同分类水平的物种相对丰度高低，并可以查看具体的丰度数值。该分析对于样品整体物种注释以及丰度情况进行动态可视化展示，客户可以根据自身的需要，选择查看不同分类水平的样品物种丰度表达情况，如可在search中输入老师重点关注的物种，即可在图中进行突出显示，方便查看在各个样本中该物种的表达情况。</p><br/>
+				<center>
+				<iframe src="src/summary_part/8_advanced_analyse/1_taxonomy_analysis/5_Krona.html"  width="50%"  height="400px"></iframe>
+				</center></br>
+				<p class="chart">图 Krona物种注释结果</p><br/>
+				<p class="paragraph">结果说明：使用Krona软件动态可视化展示单样品在不同分类水平注释结果，通过调节不同的参数来调整展示的图片，具体的参数调整如下图所示。如果项目比较关注某一个物种，可通过在Search栏中输入关注物种的名称，可快速定位到关注物种在样品中的表达情况。通过点击左侧栏中的样品名，来展示该样品的物种注释表达情况。此外，还可以调整图中字体大小以及图片大小等。<p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/1_taxonomy_analysis/5_Krona.html</p><br/>
+	
+<a name="4.2 biomarker筛选"></a>
+				<h3>4.2 biomarker筛选</h3>
+				<br/>
+				<a name="4.2.1 indicator分析"></a>
+				<h4>4.2.1 indicator分析</h4>
+				<br/>
+				<p class="paragraph">指示物种分析是扩增子数据中使用非常广泛的一种经典分析方法，通过指示性分析可以找出具有重要意义的biomarker，其主要作用是对分组等特征有指示意义。针对不同的分类层级我们使用丰度top30物种进行分析寻找不同组可以作为biomarker的物种。举例来讲，比如疾病组和健康组，筛选到某物种在疾病组显著富集，则认为该物种可作为疾病检测的潜在指示物种。类似目的地分析方法还有很多，如LEfSe分析、随机森林分析等均可以寻找biomarker。</p>
+				<center>
+				<p class="text-center"><a title="indicator分析" href="src/summary_part/8_advanced_analyse/2_biomarkers_analysis/1_Indicator_result/6_Genus/Genus_indicator.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/2_biomarkers_analysis/1_Indicator_result/6_Genus/Genus_indicator.png" class="img-width-max-middle5" />
+				</center>
+				</a></p>
+				<p class="chart">图 indicator分析（以属水平为例）</p><br/>
+				<p class="paragraph">结果说明：sqrtIVt值为indicator value的平方根结果，可以基于该值来比较微生物和处理组关联性大小，某个物种的该值越大，表明该物种越能作为处理组的biomarker。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/2_biomarkers_analysis/1_Indicator_result/*/*_indicator.png</p><br/>
+				<p class="paragraph2"><b>作图数据路径：</b>summary/8_advanced_analyse/2_biomarkers_analysis/1_Indicator_result/*/*_indicator.xlsx</p><br/>
+	
+			<a name="4.2.2  差异分析 LEfSe"></a>
+			<h4>4.2.2 差异分析 LEfSe</h4>
+			<br/>
+			<p class="paragraph">LEfSe（LDA Effect Size）分析主要目的两组或多组之间的比较，找到不同组间在丰度上有显著性差异的物种（biomarker），目前已获得了广泛的应用。LEfSe分析绘图更加直观展现组间所有层级的差异物种，也是目前用的使用频率更高的差异物种的展示图。分析步骤主要分为三步：</p>
+			<p class="paragraph">Step1：利用Kruskal-Wallis 秩和检验检测所有的特征物种，通过检测不同组间的物种丰度差异，获得显著性差异物种。</p>
+			<p class="paragraph">Step2：利用Wilcoxon秩和检验检测上步获得的显著性差异物种的所有亚种是否都趋同于同一分类级别。</p>
+			<p class="paragraph">Step3：使用线性判别分析（LDA），得到最终的差异物种（即biomarker）。<a href="https://www.omicstudio.cn/tool/60" target="_blank">LEfSe（LDA Effect Size）云工具</a>已上线，如您需要欢迎使用。</p>
+			<center>
+			<img class="chcc3" src="src/summary_part/8_advanced_analyse/2_biomarkers_analysis/2_LEfSe_result/Group_B_vs_A_0.05_3.0/LEfSe_Group_B_vs_A.cladogram.png"/>
+			<img class="chcc3" src="src/summary_part/8_advanced_analyse/2_biomarkers_analysis/2_LEfSe_result/Group_B_vs_A_0.05_3.0/LEfSe_Group_B_vs_A.png"/>
+			</a></p>
+			</center>
+			<p class="chart">图 LEfSe差异分析</p><br/>
+			<p class="paragraph">结果说明：左图（进化分支图）中不同圆圈层从内至外辐射分别代表界门纲目科属种七个分类级别，各个节点代表该水平下的一个物种分类，该物种丰度越高节点越大。其中节点颜色为黄色的表示该物种在比较组中无显著性差异，如果节点颜色为红色则表示该物种在比较组中有显著性差异，且该物种在红色分组中的丰度更高，其他颜色以此类推。显著性差异的门在图中直接标出，其他水平差异的物种节点分别用字母进行标识具体代表的物种。右图（分布柱状图）主要展示了LDA score大于预设值的显著差异物种，即具有统计学差异的Biomaker，默认预设值为3.0；柱状图的颜色代表各差异物种在哪个组中丰度更高，长短代表的是LDA score，即不同组间显著差异物种的影响程度。</p><br/>
+			<p class="paragraph2"><b>进化分支图结果路径：</b>summary/8_advanced_analyse/2_biomarkers_analysis/2_LEfSe_result/*_0.05_3.0/LEfSe_Group_*.cladogram.png</p><br/>
+			<p class="paragraph2"><b>分布柱状图结果路径：</b>summary/8_advanced_analyse/2_biomarkers_analysis/2_LEfSe_result/*_0.05_3.0/LEfSe_Group_*cladogram.png</p><br/>
+			<p class="paragraph2"><b>差异分析结果路径（可用excel打开）：</b>summary/8_advanced_analyse/2_biomarkers_analysis/2_LEfSe_result/*_0.05_3.0/LEfSe_Group_*.res</p><br/>
+			<p class="paragraph2"><b>作图数据结果路径：</b>summary/6_taxonomy_community/ASV_table_with_taxonomy.xlsx</p><br/>
+			<p class="paragraph"><b>Tip：</b>如您的结果筛选到的差异物种过多或者过少，您可以尝试使用<a href="https://www.omicstudio.cn/tool/60" target="_blank">LEfSe（LDA Effect Size）云工具</a>修改LDA阈值进行调整，LDA值越大，筛选到的差异物种越少，反之，LDA值越小，筛选到的差异物种越多，一般建议LDA值设置在2-5之间。<a href="https://www.omicstudio.cn/doc/1174" target="_blank">LEfSe 分析结果说明及个性化分析指南</a>中对LEfSe的分析结果以及个性化分析需求进行了详细说明，供您查阅。</p><br/>
+
+
+				<a name="4.2.3 曼哈顿图Manhattan"></a>
+				<h4>4.2.3 曼哈顿图Manhattan</h4>
+				<br/>
+				<p class="paragraph">曼哈顿图本质上是一个散点图，用于显示大量非零大范围波动数值，最早应用于全基因组关联分析(GWAS)研究展示高度相关位点。它得名源于样式与曼哈顿天际线相似。使用差异ASV结合分类学结果，采用Manhattan_plot展示有非常好的效果，倍受推崇。大数据中，曼哈顿图优点在于既能展示数据全貌，又能快速找到目标基因或ASV，同时可知目标的具体位置和分类、显著程度等信息。</p>
+				<center>
+				<p class="text-center"><a title="manhattan图" href="src/summary_part/8_advanced_analyse/2_biomarkers_analysis/3_Manhatta_plot/Group.B_vs_A/Group.B_vs_A_manhattan.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/2_biomarkers_analysis/3_Manhatta_plot/Group.B_vs_A/Group.B_vs_A_manhattan.png" alt="Group.B_vs_A_manhattan.png" class="img-width-max-middle5" />
+				</center>
+				</a></p>
+				<p class="chart">图 manhattan图</p><br/>
+				<p class="paragraph">结果说明：针对两两比较组对ASV丰度进行差异分析，图中enriched（上三角）表示显著上调，depleted（下三角）表示显著下调，nosig（圆点）表示无显著性差异，用不同的颜色区分各ASV所属的门水平物种。我们关注差异显著的ASV以及它们对应的门，也可以初步看出该项目中哪个门差异菌群更多。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/2_biomarkers_analysis/3_Manhatta_plot/*_manhattan.png</p><br/>
+		
+				<a name="4.3 相关性分析"></a>
+				<h3>4.3 相关性分析</h3>
+				<br/>
+					
+				<a name="4.3.1 相关性网络图/热图Spearman"></a>
+				<h4>4.3.1 相关性网络图/热图Spearman</h3>
+				<br/>
+				<p class="paragraph">在微生态研究中，除了样品物种组成外，大家还比较关注物种之间以及物种与环境因子间的关联分析。通过不同物种在各样品中的丰度及变化关系，计算物种之间的相关性，通过一定条件的筛选，找到互相之间有关联的物种。根据该分析，可以找到不同微生物类群间的相互关系（正相关或负相关），可能对揭示一些生物学意义起到重要的作用。Spearman是通过计算属水平丰度top30的微生物丰度，获得两两优势菌群之间的相关性以及显著性P值，之后再用相关性绘制出网络图以及相关性热图。<a href="https://www.omicstudio.cn/tool/59"target="_blank">相关性聚类标记热图云工具</a>和<a href="https://www.omicstudio.cn/tool/64"target="_blank">相关性网络图云工具</a>已上线， 如有需要欢迎使用。</a></p>
+				<center>
+				<class="text-center"><a title="Spearman网络图" href="src/summary_part/8_advanced_analyse/3_correlation_analysis/network_0.8.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/3_correlation_analysis/network_0.8.png" alt="network_0.8.png" class="img-width-max-middle5" /></a>
+				<class="text-center"><a title="相关性热图" href="src/summary_part/8_advanced_analyse/3_correlation_analysis/corrheatmap.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/3_correlation_analysis/corrheatmap.png" alt="corrheatmap.png" class="img-width-max-middle5" /></a>
+				</center>
+				<p class="chart">图 Spearman网络图/热图</p><br/>
+				<p class="paragraph">结果说明：网络图中不同的节点代表不同的优势属，节点的颜色表示该物种所属的门水平物种，节点之间的连接表明两个属之间存在相关性，我们默认展示相关性系数|rho|>0.8的关系对，线条粗细表示相关性的强弱，线条越粗，表示相关性越强；线条越细，表示相关性越弱。实线表明正相关，虚线表明负相关。节点的大小表示与该菌关联的其他菌的数目多少，关联越多，节点越大；反之，则节点越小。通过节点连接的数量，可以找出与菌群中其它成员的关联较多的物种，进而探索这些物种彼此相关性的生物学意义。如果缺少网络图说明分析结果不满足筛选阈值。</p><br/>
+				<p class="paragraph2"><b>相关性网络图路径：</b>summary/8_advanced_analyse/3_correlation_analysis/network_0.8.png</p><br/>
+				<p class="paragraph2"><b>相关性热图路径：</b>summary/8_advanced_analyse/3_correlation_analysis/corrheatmap.png</p><br/>
+				<p class="paragraph2"><b>相关性系数路径：</b>summary/8_advanced_analyse/3_correlation_analysis/Genus_abund_top30_sig_rho.xlsx</p><br/>
+				<p class="paragraph2"><b>p值路径：</b>summary/8_advanced_analyse/3_correlation_analysis/Genus_abund_top30_sig_pvalue.xlsx</p><br/>
+				<p class="paragraph2"><b>作图数据路径：</b>summary/6_taxonomy_community/*/All/*_abund_top30.xlsx</p><br/>
+				
+			<a name="4.4 功能分析"></a>
+				<h3>4.4 功能分析</h3>
+				<br/>
+						
+			<a name="4.4.1 PICRUSt2功能预测"></a>
+			<h4>4.4.1 PICRUSt2功能预测</h4>
+			<br/>
+			<p class="paragraph">PICRUSt[6]将菌群与功能建立了“映射”，从推出至今已近6年，引用2500余次,是菌群功能预测的不二之选。最近推出的PICRUSt2(https://github.com/picrust/picrust2)相比V1版本，具有以下两大优势：1.任何OTU/ASV直接预测功能；2.数据库扩大10倍。PICRUSt2 (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States)是一款基于标记基因序列来预测功能丰度的软件。“功能”通常指的是基因家族，如KEGG同源基因和酶分类号，但可以预测任何一个任意的特性。同样，预测通常基于16S rDNA基因测序数据，但也可以使用其他标记基因。</p><br/>
+			<p class="paragraph">基于PICRUSt2功能预测结果，您可以得到包括来自以下数据集的基因家族: COG, EC, KO, PFAM, TIGRFAM等数据库功能注释结果，可以用官方推荐的<a href="https://www.omicstudio.cn/faq//kindeditor-4.1.10/attached/file/20181221/20181221005505_33007.pdf" target="_blank">STAMP差异分析</a>或者LEfSe进行后续分析。STAMP以及LEfSe均是差异分析的利器，是微生物多样性结果中重要展示的分析方法。</p><br/>
+			<center>
+			<p class="text-center"><a title="功能预测STAMP差异分析" href="src/summary_part/8_advanced_analyse/4_function_prediction/1_PICRUSt2_result/Group.B_vs_A/PICRUSt2_COG_Group.B_vs_A_diff.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/1_PICRUSt2_result/Group.B_vs_A/PICRUSt2_COG_Group.B_vs_A_diff.png" alt="PICRUSt2_COG_Group.B_vs_A_diff.png" class="img-width-max" />
+			</center></br>
+			</a></p>
+			</center>
+			<p class="chart">图 功能预测STAMP差异分析（以COG数据库为例）</p><br/>
+			<p class="paragraph">结果说明：上图STAMP分析结果仅针对两两比较的t-test差异检验结果中，p值<0.05的前30个功能进行图片展示。结果中展示统计学上差异显著的功能（置信区间 95%），可以初步推测您的菌群和以上图中相关功能有关。多组比较仅展示丰度情况，未进行差异分析。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/4_function_prediction/1_PICRUSt2_result/*/PICRUSt2_COG_Group.*_diff.png</p><br/>
+				<p class="paragraph2"><b>各数据库丰度表路径：</b>summary/8_advanced_analyse/4_function_prediction/1_PICRUSt2_result/*_pred_metagenome_unstrat_descrip.xlsx</p><br/>
+				<p class="paragraph2"><b>差异分析结果路径：</b>summary/8_advanced_analyse/4_function_prediction/1_PICRUSt2_result/*/PICRUSt2_COG_Group.*_diff.xlsx</p><br/>
+					
+				<p class="paragraph"><b>Tip：</b>我们默认仅针对KEGG和COG数据库进行预测，如您需要其他数据库结果，可在<a href="https://www.omicstudio.cn/analysis/picrust2"target="_blank">云分析-PICRUSt2功能预测分析</a>中选择其他数据库进行分析</a>。</p><br/
+	
+				<a name="4.4.2 细菌表型预测BugBase"></a>
+				<h4>4.4.2 细菌表型预测BugBase</h4><br/>
+				<p class="paragraph">不同宿主体位的微生物群落涉及到人类健康的许多方面，包括代谢、免疫反应、疾病状态，甚至行为。随着微生物群落领域从检测疾病相关性转向识别疾病机制，了解微生物群落内微生物的功能能力至关重要。当试图设计微生物靶向治疗时，了解临床相关的微生物组表型也很重要。例如，更好地了解胃肠道中革兰氏阴性菌和革兰氏阳性菌的比例，将有助于更有针对性的抗生素治疗方法，而确定供体粪便样本的厌氧菌和病原体含量，有助于预测粪便微生物组移植的有效性和安全性。Rob Knight实验室提供了一款神器——BugBase[7,8]，它是一款预测微生物组样品表型的工具，主要包括9个潜在的表型，包括好氧（Aerobic）、厌氧（Anaerobic）、含移动元素（Contains Mobile Elements）、兼性厌氧（Facultatively Anaerobic）、生物膜形成（Forms Biofilms）、革兰氏阴性（Gram Negative）、革兰氏阳性（Gram Positive）、潜在致病性（Potentially Pathogenic）和耐应激性（Stress Tolerant）。可以预测大量比较信息，非常适合医学领域的研究。</p><br/>
+				<b><form id="form" >
+			
+			</form></b><br/>
+				<center>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="Aerobic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Aerobic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Aerobic.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="Anaerobic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Anaerobic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Anaerobic.png" />
+				<li class="slide"><a title="Contains_Mobile_Elements" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Contains_Mobile_Elements.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Contains_Mobile_Elements.png" />
+				<li class="slide"><a title="Facultatively_Anaerobic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Facultatively_Anaerobic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Facultatively_Anaerobic.png" />
+				<li class="slide"><a title="Forms_Biofilms" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Forms_Biofilms.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Forms_Biofilms.png" />
+				<li class="slide"><a title="Gram_Negative" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Negative.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Negative.png" />
+				<li class="slide"><a title="Gram_Positive" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Positive.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Positive.png" />
+				<li class="slide"><a title="Potentially_Pathogenic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Potentially_Pathogenic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Potentially_Pathogenic.png" />
+				<li class="slide"><a title="Stress_Tolerant" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Stress_Tolerant.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Stress_Tolerant.png" />
+				<li class="slide"><a title="Stress_Tolerant" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/taxa_legend.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/taxa_legend.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				</center>
+				<p class="chart">图 细菌表型预测（BUGbase）</p><br/>
+				<p class="paragraph">结果说明：通过柱状堆叠图展示不同表型的物种在不同分组中相对丰度情况。图中横坐标为分组名称，纵坐标为预测为不同表型的门水平物种的相对丰度情况，可以根据颜色区分不同的物种，柱子高低区分不同物种在不同分组中的相对丰度。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions</p><br/>
+			
+			</form></b><br/>
+				<center>
+				<div data-thumbnail="bottom" data-keypress="true" data-autoplay="3000" data-arrows="show" class="raxus-slider" id="testtwo"><ul class="slider-relative"><li class="slide"><a title="Aerobic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Aerobic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Aerobic.png" />
+				</a>
+				</li>
+				<li class="slide"><a title="Anaerobic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Anaerobic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Anaerobic.png" />
+				<li class="slide"><a title="Contains_Mobile_Elements" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Contains_Mobile_Elements.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Contains_Mobile_Elements.png" />
+				<li class="slide"><a title="Facultatively_Anaerobic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Facultatively_Anaerobic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Facultatively_Anaerobic.png" />
+				<li class="slide"><a title="Forms_Biofilms" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Forms_Biofilms.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Forms_Biofilms.png" />
+				<li class="slide"><a title="Gram_Negative" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Negative.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Negative.png" />
+				<li class="slide"><a title="Gram_Positive" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Positive.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Positive.png" />
+				<li class="slide"><a title="Potentially_Pathogenic" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Potentially_Pathogenic.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Potentially_Pathogenic.png" />
+				<li class="slide"><a title="Stress_Tolerant" href="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Stress_Tolerant.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Stress_Tolerant.png" />
+				</a>
+				</li>
+				</ul>
+				</div>
+				</center>
+				<p class="chart">图 细菌表型预测（BUGbase）</p><br/>
+				<p class="paragraph">结果说明：通过散点图展示预测得到的不同分组中每个样本在不同表型中的相对丰度，如中间的黑色线为中位值，上面和下面的线分别为上四分位和下四分位，每个点代表该一个样本，不同颜色代表不同的组，点在纵坐标的位置为每个样本中不同表型的物种的相对丰度大小。</p><br/>
+				<p class="paragraph2"><b>完整结果路径：</b>summary/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes</p><br/>
+				<p class="paragraph2"><b>不同比较组之间的差异分析P值结果路径：</b>summary/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/*_stats.xlsx</p><br/>
+	
+				<a name="4.5 环境因子分析"></a>
+				<h3>4.5 环境因子分析</h3>
+				<br/>
+				<a name="4.5.1 RDA分析"></a>
+				<h4>4.5.1 RDA分析</h4>
+				<br/>
+				<p class="paragraph">RDA分析其实就是约束化的主成分分析（PCA），它的优点就是考虑了环境因子（如土壤研究中的PH值，酸碱度，疾病研究中临床理化因子等）对样本的影响，可同时反映样本，环境因子和物种三者或两两之间的关系。<b>以下示例图片</b>：</p><br/>
+				<center>
+				<p class="text-center"><a title="RDA示例图" href="src/pics/RDA示例图.png" class="img-toggle"><img src="src/pics/RDA示例图.png" alt="RDA示例图.png" class="img-width-max-chcc15" />
+				</center>
+				</a></p>
+				<p class="chart">图 RDA分析</p><br/>
+				
+				<p class="paragraph">结果说明：我们建议选取丰度top10的菌群与每个样本测定的环境指标或临床指标进行分析，您可以后期提供给我们相关临床指标或者环境指标数据（需要提供的的信息与测序样本一一对应）绘制属于您的RDA分析结果。示例图中每个点代表一个样本，两点之间的距离越接近，说明两个样本的群落结构相似度越高。箭头分别代表不同的影响因素，影响因素之间（因素与样本之间）的夹角为锐角时表示两个因素正相关，钝角时为负相关，射线越长，表明该因素的作用越大。样本在箭头上投影点的位置近似代表该因素在对应样本中的数值大小。<a href="https://www.omicstudio.cn/tool/65"target="_blank">RDA/CCA云工具</a>已上线，如您需要欢迎使用</a>。</p><br/>
+		
+				<a name="4.5.2 菌群和指标相关性聚类热图"></a>
+				<h4>4.5.2 菌群和指标相关性聚类热图</h4>
+				<br/>
+				<p class="paragraph">斯皮尔曼相关系数（Spearman Correlation Coefficient）是一种线性相关系数，是用来反映两个变量线性相关程度的统计量。相关系数用 r 表示，其中 n 为样本量，分别为两个变量的观测值和均值。r 描述的是两个变量间线性相关强弱的程度，r 的绝对值越大表明相关性越强。通过计算微生物与环境指标之间的斯皮尔曼相关系数并通过聚类热图的形式展示，来发现它们之间的关系。<b>以下示例图片</b>：</p><br/>
+				<center>
+				<p class="text-center"><a title="Demo_Heatmap_Correlation" href="src/pics/Demo_Heatmap_Correlation.png" class="img-toggle"><img src="src/pics/Demo_Heatmap_Correlation.png" alt="Demo_Heatmap_Correlation.png" class="img-width-max-chcc15" />
+				</center>
+				</a></p>
+				<p class="chart">图 菌群和指标相关性聚类热图</p><br/>
+				
+				<p class="paragraph">结果说明：图中行表示物种，列表示环境指标，图中*标记代表 p 值<0.05,**标记代表 p 值<0.01，红色表示正相关，蓝色表示负相关。颜色越深，表示相关性越强。您后期可以提供给我们环境指标数据，我们帮您出具该分析结果，该分析环境指标数量没有限制。<a href="https://www.omicstudio.cn/tool/59"target="_blank">相关性聚类标记热图云工具</a>已上线， 您也可以自己尝试绘制。</p><br/>
+		
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+
+			<div class="copyright_line"> </div>
+			<a name="参考文献"></a>
+			<h2>参考文献</h2>
+				<br/>
+				<p class="paragraph3">[1]Callahan Benjamin J,McMurdie Paul J,Rosen Michael J et al. DADA2: High-resolution sample inference from Illumina amplicon data.[J] .Nat. Methods, 2016, 13: 581-3. </p>
+				<p class="paragraph3">[2]Bolyen Evan,Rideout Jai Ram,Dillon Matthew R et al. Author Correction: Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2.[J] .Nat. Biotechnol., 2019, 37: 1091.</p>
+				<p class="paragraph3">[3]Blaxter M, Mann J, Chapman T, Thomas F, Whitton C, Floyd R, Abebe E (2005) Defining operational taxonomic units using DNA barcode data. Philosophical transactions of the Royal Society of London Series B, Biological sciences 360: 1935-1943. doi: 10.1098/rstb.2005.1725. </p>
+				<p class="paragraph3">[4]Rognes T, Flouri T, Nichols B, Quince C, Mahe F (2016) VSEARCH: a versatile open source tool for metagenomics. PeerJ 4: e2584. doi: 10.7717/peerj.2584</p>
+				<p class="paragraph3">[5]Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, Costello EK, Fierer N, Pena AG, goodrich JK, Gordon JI, Huttley GA, Kelley ST, Knights D, Koenig JE, Ley RE, Lozupone CA, McDonald D, Muegge BD, Pirrung M, Reeder J, Sevinsky JR, Turnbaugh PJ, Walters WA, Widmann J, Yatsunenko T, Zaneveld J, Knight R (2010) QIIME allows analysis of high-throughput community sequencing data. Nature methods 7: 335-336. doi: 10.1038/nmeth.f.303</p>
+				<p class="paragraph3">[6]Langille Morgan G I,Zaneveld Jesse,Caporaso J Gregory et al. Predictive functional profiling of microbial communities using 16S rRNA marker gene sequences.[J] .Nat. Biotechnol., 2013, 31: 814-21.</p>
+				<p class="paragraph3">[7]Tonya Ward, Jake Larson, Jeremy Meulemans, Ben Hillmann, Joshua Lynch, Dimitri Sidiropoulos, John Spear, Greg Caporaso, Ran Blekhman, Rob Knight, Ryan Fink, Dan Knights.BugBase Predicts Organism Level Microbiome Phenotypes,bioRxiv 133462</p>
+				<p class="paragraph3">[8]Meyer F, Paarmann D, D'Souza M, Olson R, Glass EM, Kubal M, Paczian T, Rodriguez A, Stevens R, Wilke A, Wilkening J, Edwards RA (2008) The metagenomics RAST server - a public resource for the automatic phylogenetic and functional analysis of metagenomes. BMC bioinformatics 9: 386. doi: 10.1186/1471-2105-9-386</p><br/><br/><br/>
+	
+				<div id="page">
+				<p class="head"><a href="#home" ><img class="logo" align="left" src="src/pics/lcbi.jpg" /></a>
+				<a name="首页">联川生物</a>
+				<hr /></div>
+				</p><br /><br />
+			<div class="copyright_line"> </div>
+			<a name="附录"></a>
+			<h2>附录</h2>
+				<p class="paragraph"><b>1.项目材料与方法：</b><a href="https://www.omicstudio.cn/doc/1179" target="_blank">16S测序项目材料与方法中文版</a>和<a href="https://www.omicstudio.cn/doc/1178" target="_blank">16S测序项目材料与方法英文版</a></p>
+				<p class="paragraph"><b>2.实验试剂耗材：</b><a href="https://www.omicstudio.cn/doc/1184" target="_blank">实验试剂耗材</a></p>
+				<p class="paragraph"><b>3.扩增子项目常见售后集锦：</b><a href="https://www.omicstudio.cn/doc/1176" target="_blank">扩增子项目常见售后集锦</a></p>
+				<p class="paragraph"><b>4.个性化分析说明：</b><a href="https://www.omicstudio.cn/doc/1181" target="_blank">个性化分析说明</a></p>
+				<p class="paragraph"><b>5.summary文件结构：</b><a href="https://www.omicstudio.cn/doc/1177" target="_blank">summary文件结构</a></p>
+				<p class="paragraph"><b>6.原始数据上传SRA操作指南：</b><a href="https://www.omicstudio.cn/doc/1120" target="_blank">上传指南</a></p>
+				<p class="paragraph"><b>7.项目相关示例文献：</b><a href="https://www.omicstudio.cn/doc/567" target="_blank">16s rDNA报告参考文献及相关文献</a></p>
+				<p class="paragraph"><b>8.数据深入挖掘指南：</b><a href="https://www.omicstudio.cn/doc/1185" target="_blank">数据深入挖掘指南</a></p><br/><br/>
+				<center>
+					<class="text-center"><a title="联川生物" href="src/pics/yunpingtai.png" class="img-toggle"><img src="src/pics/yunpingtai.png" alt="yunpingtai.png" align="center" class="img-width-max-middle4" /></a>
+					<class="text-center"><a title="联川生物" href="src/pics/weixin.png" class="img-toggle"><img src="src/pics/weixin.png" alt="weixin.png" align="center" class="img-width-max-middle4" /></a>
+				</center>
+			<hr width="100%">	
+			<footer class="templatemo-footer">
+			<div class="templatemo-copyright">
+			<p class="foot">地      址：杭州经济技术开发区下沙6号大街260号中自科技园16幢4层</p>
+			<p class="foot">邮政编码：310018</p>
+			<P class="foot">联系电话：0571-87662413    传真：0571-81951905</p>
+			<p class="foot">网址: <a href="http://www.lc-bio.com/"target="w34">http://www.lc-bio.com/</a> Email: support@lc-bio.com</p>
+			<p class="foot">联川生物云平台: <a href="https://www.omicstudio.cn/ " target="w34">https://www.omicstudio.cn/</a></p>
+			<p class="foot">OmicStudio资料汇总（上左）：扫码获得硬核科研分析绘图工具资料（包括使用手册、B站直播、微信稿等），精心筛选，实时更新。</p>
+			<p class="foot">微信公众号（上右）：更多资讯请随时关注联川生物公众微信号，回复特定关键词提取相关信息。</p>
+			</div>
+			</footer>
+		</div>
+
+		<script src="src/js/jquery.min.js"></script>
+		<script src="src/js/templatemo_script.js"></script>
+		<script src="src/js/jquery.nicescroll.js"></script>
+		<link href="src/css/raxus.css" type="text/css" rel="stylesheet" />
+		<link href="src/css/index.css" type="text/css" rel="stylesheet" />
+		<link href="src/js/fancyBox/jquery.fancybox.css" type="text/css" rel="stylesheet" />
+		<script src="src/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="src/js/nav.js" type="text/javascript"></script>
+		<script src="src/js/raxus-slider.min.js" type="text/javascript"></script>
+		<script src="src/js/fancyBox/jquery.fancybox.pack.js" type="text/javascript"></script>
+		<script src="src/js/fancyBox/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+		<script src="src/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="src/js/ready.js" type="text/javascript"></script>
+		<script src="src/js/scrolltop.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+		<script type="text/javascript">
+		// Line chart
+		var randomScalingFactor = function(){ return Matd.round(Matd.random()*100)};
+		var lineChartData = {
+		  labels : ["January","February","March","April","May","June","July"],
+		  datasets : [
+		  {
+		label: "My First dataset",
+		fillColor : "rgba(220,220,220,0.2)",
+		strokeColor : "rgba(220,220,220,1)",
+		pointColor : "rgba(220,220,220,1)",
+		pointStrokeColor : "#fff",
+		pointHighlightFill : "#fff",
+		pointHighlightStroke : "rgba(220,220,220,1)",
+		data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		  },
+		  {
+		label: "My Second dataset",
+		fillColor : "rgba(151,187,205,0.2)",
+		strokeColor : "rgba(151,187,205,1)",
+		pointColor : "rgba(151,187,205,1)",
+		pointStrokeColor : "#fff",
+		pointHighlightFill : "#fff",
+		pointHighlightStroke : "rgba(151,187,205,1)",
+		data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		  }
+		  ]
+
+		}
+
+		window.onload = function(){
+		  var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
+		  window.myLine = new Chart(ctx_line).Line(lineChartData, {
+		responsive: true
+		  });
+		};
+
+		$('#myTab a').click(function (e) {
+		  e.preventDefault();
+		  $(tdis).tab('show');
+		});
+
+		$('#loading-example-btn').click(function () {
+		  var btn = $(tdis);
+		  btn.button('loading');
+		  // $.ajax(...).always(function () {
+		  //   btn.button('reset');
+		  // });
+	  });
+	  </script>
+	 
+	</body>
+	</html>
+	<script type="text/javascript">
+	function gradeChange(){
+		
+		if ($('#pdf4').val() == ('src/summary_part/3_ASV_profiling/2_venn_diagrams/venn_diagram_Group_B_vs_A.png')) {
+			$('.chcc4').attr('src','src/summary_part/3_ASV_profiling/2_venn_diagrams/venn_diagram_Group_B_vs_A.png');
+		};
+		
+		if ($('#pdf1').val() == ('src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/weighted_unifrac_pcoa_html/index.html')) {
+			$('.chcc1').attr('src','src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/weighted_unifrac_pcoa_html/index.html');
+		};
+		
+		if ($('#pdf1').val() == ('src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/bray_curtis_pcoa_html/index.html')) {
+			$('.chcc1').attr('src','src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/bray_curtis_pcoa_html/index.html');
+		};
+		
+		if ($('#pdf1').val() == ('src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/jaccard_pcoa_html/index.html')) {
+			$('.chcc1').attr('src','src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/jaccard_pcoa_html/index.html');
+		};
+		
+		if ($('#pdf1').val() == ('src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/unweighted_unifrac_pcoa_html/index.html')) {
+			$('.chcc1').attr('src','src/summary_part/5_beta_diversity/2_PCoA_result/PCoA_3D/unweighted_unifrac_pcoa_html/index.html');
+		};
+		
+		if ($('#pdf2').val() == ('src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/chao1.rare.png')) {
+			$('.chcc2').attr('src','src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/chao1.rare.png');
+		};
+		
+		if ($('#pdf2').val() == ('src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/pielou_e.rare.png')) {
+			$('.chcc2').attr('src','src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/pielou_e.rare.png');
+		};
+		
+		if ($('#pdf2').val() == ('src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/shannon.rare.png')) {
+			$('.chcc2').attr('src','src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/shannon.rare.png');
+		};
+		
+		if ($('#pdf2').val() == ('src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/observed_otus.rare.png')) {
+			$('.chcc2').attr('src','src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/observed_otus.rare.png');
+		};
+		
+		if ($('#pdf2').val() == ('src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/simpson.rare.png')) {
+			$('.chcc2').attr('src','src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/simpson.rare.png');
+		};
+		
+		if ($('#pdf2').val() == ('src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/goods_coverage.rare.png')) {
+			$('.chcc2').attr('src','src/summary_part/4_alpha_diversity/1_rarefaction_curves/All/goods_coverage.rare.png');
+		};
+		
+		if ($('#pdf5').val() == ('src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_stacked_bar.png')) {
+			$('.chcc5').attr('src','src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_stacked_bar.png');
+		};
+		
+		if ($('#pdf5').val() == ('src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_stacked_bar.png')) {
+			$('.chcc5').attr('src','src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_stacked_bar.png');
+		};
+		
+		if ($('#pdf5').val() == ('src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_stacked_bar.png')) {
+			$('.chcc5').attr('src','src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_stacked_bar.png');
+		};
+		
+		if ($('#pdf5').val() == ('src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_stacked_bar.png')) {
+			$('.chcc5').attr('src','src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_stacked_bar.png');
+		};
+		
+		if ($('#pdf5').val() == ('src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_stacked_bar.png')) {
+			$('.chcc5').attr('src','src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_stacked_bar.png');
+		};
+		
+		if ($('#pdf5').val() == ('src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_stacked_bar.png')) {
+			$('.chcc5').attr('src','src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_stacked_bar.png');
+		};
+		
+		if ($('#pdf7').val() == ('src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_heatmap.png')) {
+			$('.chcc7').attr('src','src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_heatmap.png');
+		};
+		
+		if ($('#pdf7').val() == ('src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_heatmap.png')) {
+			$('.chcc7').attr('src','src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_heatmap.png');
+		};
+		
+		if ($('#pdf7').val() == ('src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_heatmap.png')) {
+			$('.chcc7').attr('src','src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_heatmap.png');
+		};
+		
+		if ($('#pdf7').val() == ('src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_heatmap.png')) {
+			$('.chcc7').attr('src','src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_heatmap.png');
+		};
+		
+		if ($('#pdf7').val() == ('src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_heatmap.png')) {
+			$('.chcc7').attr('src','src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_heatmap.png');
+		};
+		
+		if ($('#pdf7').val() == ('src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_heatmap.png')) {
+			$('.chcc7').attr('src','src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_heatmap.png');
+		};
+		
+		if ($('#pdf18').val() == ('src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_cluster.png')) {
+			$('.chcc18').attr('src','src/summary_part/6_taxonomy_community/2_Phylum/Group/Phylum_abund_Group_cluster.png');
+		};
+		
+		if ($('#pdf18').val() == ('src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_cluster.png')) {
+			$('.chcc18').attr('src','src/summary_part/6_taxonomy_community/3_Class/Group/Class_abund_Group_cluster.png');
+		};
+		
+		if ($('#pdf18').val() == ('src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_cluster.png')) {
+			$('.chcc18').attr('src','src/summary_part/6_taxonomy_community/4_Order/Group/Order_abund_Group_cluster.png');
+		};
+		
+		if ($('#pdf18').val() == ('src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_cluster.png')) {
+			$('.chcc18').attr('src','src/summary_part/6_taxonomy_community/5_Family/Group/Family_abund_Group_cluster.png');
+		};
+		
+		if ($('#pdf18').val() == ('src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_cluster.png')) {
+			$('.chcc18').attr('src','src/summary_part/6_taxonomy_community/6_Genus/Group/Genus_abund_Group_cluster.png');
+		};
+		
+		if ($('#pdf18').val() == ('src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_cluster.png')) {
+			$('.chcc18').attr('src','src/summary_part/6_taxonomy_community/7_Species/Group/Species_abund_Group_cluster.png');
+		};
+		
+		if ($('#pdf9').val() == ('src/summary_part/5_beta_diversity/5_anosim_result/bray_curtis_anosim_html/index.html')) {
+			$('.chcc9').attr('src','src/summary_part/5_beta_diversity/5_anosim_result/bray_curtis_anosim_html/index.html');
+		};
+		
+		if ($('#pdf9').val() == ('src/summary_part/5_beta_diversity/5_anosim_result/weighted_unifrac_anosim_html/index.html')) {
+			$('.chcc9').attr('src','src/summary_part/5_beta_diversity/5_anosim_result/weighted_unifrac_anosim_html/index.html');
+		};
+		
+		if ($('#pdf9').val() == ('src/summary_part/5_beta_diversity/5_anosim_result/unweighted_unifrac_anosim_html/index.html')) {
+			$('.chcc9').attr('src','src/summary_part/5_beta_diversity/5_anosim_result/unweighted_unifrac_anosim_html/index.html');
+		};
+		
+		if ($('#pdf9').val() == ('src/summary_part/5_beta_diversity/5_anosim_result/jaccard_anosim_html/index.html')) {
+			$('.chcc9').attr('src','src/summary_part/5_beta_diversity/5_anosim_result/jaccard_anosim_html/index.html');
+		};
+		
+		if ($('#pdf10').val() == ('src/summary_part/7_diff_abundance/6_Genus/Group.B_vs_A/Group.B_vs_A_diff_barplot.png')) {
+			$('.chcc10').attr('src','src/summary_part/7_diff_abundance/6_Genus/Group.B_vs_A/Group.B_vs_A_diff_barplot.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Aerobic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Aerobic.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Anaerobic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Anaerobic.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Contains_Mobile_Elements.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Contains_Mobile_Elements.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Facultatively_Anaerobic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Facultatively_Anaerobic.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Forms_Biofilms.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Forms_Biofilms.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Negative.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Negative.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Positive.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Gram_Positive.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Potentially_Pathogenic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Potentially_Pathogenic.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Stress_Tolerant.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/taxa_contributions/Stress_Tolerant.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Aerobic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Aerobic.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Contains_Mobile_Elements.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Contains_Mobile_Elements.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Facultatively_Anaerobic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Facultatively_Anaerobic.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Forms_Biofilms.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Forms_Biofilms.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Negative.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Negative.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Negative.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Negative.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Positive.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Gram_Positive.png');
+		};
+		
+		if ($('#pdf11').val() == ('src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Potentially_Pathogenic.png')) {
+			$('.chcc11').attr('src','src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Potentially_Pathogenic.png');
+		};
+		
+		if ($('#pdf11').val() == ('/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Stress_Tolerant.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Stress_Tolerant.png')) {
+			$('.chcc11').attr('src','/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Stress_Tolerant.png" class="img-toggle"><img src="src/summary_part/8_advanced_analyse/4_function_prediction/2_BUGbase_result/predicted_phenotypes/Stress_Tolerant.png');
+		};
+		
+	}
+	</script>
+	
