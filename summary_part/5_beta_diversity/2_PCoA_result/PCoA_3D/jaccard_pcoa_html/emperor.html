@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Emperor</title>
+    <!-- core dependencies that are otherwise included via the jupyter notebook -->
+    <script src="./vendor/js/require-2.1.22.min.js"></script>
+    <script src="./vendor/js/jquery-2.1.4.min.js"></script>
+    <meta charset="utf-8">
+
+    <script type="text/javascript">
+
+if ($("#emperor-css").length == 0){{
+    $("head").append([
+
+        '<link id="emperor-css" rel="stylesheet" type="text/css" href="./css/emperor.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/jquery-ui.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/slick.grid.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/spectrum.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/chosen.min.css">',
+        '<link rel="stylesheet" type="text/css" href="./vendor/css/jquery.contextMenu.min.css">'
+    ]);
+}}
+</script>
+
+
+    <style>
+      #emperor-notebook-0x6f2b23a7 {
+        height:100vh !important;
+        padding: 0px !important;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='emperor-notebook-0x6f2b23a7' style="position: relative; width:100%; height:500px;">
+  <div class='loading' style="position: absolute;top: 50%;left: 50%;margin-left: -229px; margin-top: -59px; z-index: 10000;height:118px;width:458px;padding:0px"><img src='./img/emperor.png' alt='Emperor resources missing. Expected them to be found in .'></div>
+</div>
+</div>
+
+<script type="text/javascript">
+// When running in the Jupyter notebook we've encountered version conflicts
+// with some dependencies. So instead of polluting the global require context,
+// we define a new context.
+var emperorRequire = require.config({
+'context': 'emperor',
+// the left side is the module name, and the right side is the path
+// relative to the baseUrl attribute, do NOT include the .js extension
+'paths': {
+  /* jQuery */
+  'jquery': './vendor/js/jquery-2.1.4.min',
+  'jqueryui': './vendor/js/jquery-ui.min',
+  'jquery_drag': './vendor/js/jquery.event.drag-2.2.min',
+
+  /* jQuery plugins */
+  'chosen': './vendor/js/chosen.jquery.min',
+  'spectrum': './vendor/js/spectrum.min',
+  'position': './vendor/js/jquery.ui.position.min',
+  'contextmenu': './vendor/js/jquery.contextMenu.min',
+
+  /* other libraries */
+  'underscore': './vendor/js/underscore-min',
+  'chroma': './vendor/js/chroma.min',
+  'filesaver': './vendor/js/FileSaver.min',
+  'blob': './vendor/js/Blob',
+  'canvastoblob': './vendor/js/canvas-toBlob',
+  'd3': './vendor/js/d3.min',
+
+  /* THREE.js and plugins */
+  'three': './vendor/js/three.min',
+  'orbitcontrols': './vendor/js/three.js-plugins/OrbitControls',
+  'projector': './vendor/js/three.js-plugins/Projector',
+  'svgrenderer': './vendor/js/three.js-plugins/SVGRenderer',
+  'canvasrenderer': './vendor/js/three.js-plugins/CanvasRenderer',
+
+  /* SlickGrid */
+  'slickcore': './vendor/js/slick.core.min',
+  'slickgrid': './vendor/js/slick.grid.min',
+  'slickformatters': './vendor/js/slick.editors.min',
+  'slickeditors': './vendor/js/slick.formatters.min',
+
+  /* Emperor's objects */
+  'util': './js/util',
+  'model': './js/model',
+  'view': './js/view',
+  'controller': './js/controller',
+  'draw': './js/draw',
+  'scene3d': './js/sceneplotview3d',
+  'shapes': './js/shapes',
+  'animationdirector': './js/animate',
+  'trajectory': './js/trajectory',
+
+  /* controllers */
+  'abcviewcontroller': './js/abc-view-controller',
+  'viewcontroller': './js/view-controller',
+  'colorviewcontroller': './js/color-view-controller',
+  'visibilitycontroller': './js/visibility-controller',
+  'opacityviewcontroller': './js/opacity-view-controller',
+  'scaleviewcontroller': './js/scale-view-controller',
+  'shapecontroller': './js/shape-controller',
+  'axescontroller': './js/axes-controller',
+  'animationscontroller': './js/animations-controller',
+
+  /* editors */
+  'shape-editor': './js/shape-editor',
+  'color-editor': './js/color-editor',
+  'scale-editor': './js/scale-editor'
+
+},
+/*
+   Libraries that are not AMD compatible need shim to declare their
+   dependencies.
+ */
+'shim': {
+  'jquery_drag': {
+    'deps': ['jquery', 'jqueryui']
+  },
+  'chosen': {
+    'deps': ['jquery'],
+    'exports': 'jQuery.fn.chosen'
+  },
+  'contextmenu' : {
+    'deps': ['jquery', 'jqueryui', 'position']
+  },
+  'filesaver' : {
+    'deps': ['blob']
+  },
+  'canvastoblob' : {
+    'deps': ['blob']
+  },
+  'slickcore': ['jqueryui'],
+  'slickgrid': ['slickcore', 'jquery_drag', 'slickformatters', 'slickeditors']
+}
+});
+
+emperorRequire(
+["jquery", "model", "controller"],
+function($, model, EmperorController) {
+  var DecompositionModel = model.DecompositionModel;
+
+  var div = $('#emperor-notebook-0x6f2b23a7');
+
+  var data = {"plot": {"decomposition": {"axes_names": [0, 1, 2, 3, 4], "ci": null, "coordinates": [[0.3741298310759, -0.10936156613406386, -0.5832773037432305, -0.3975909400475849, -0.062218728422091946], [0.4359778169877597, -0.8526036937037529, 0.5104348534096012, 0.2388432741592479, -0.1913790362774636], [0.38040592507317056, -0.3400344581834297, -0.3370619400082542, -0.17716616773923055, 0.05826185658767629], [0.5628340863036185, -0.10727911176812353, -0.40365898562280467, -0.26914428124432954, -0.012301650365007692], [0.46211812894713905, -0.4350371741342415, -0.35569524240787004, -0.34400741930052786, 0.17166385432345563], [0.4518370150031699, -0.7762531615555001, 0.40921477400497097, 0.12315934428896207, -0.16036261273551347], [0.4925666196611706, 0.4715293192287124, 0.01427087189939942, 0.2009128979722857, 0.25992992858783537], [0.36644462029015956, 0.6369452816140617, -0.2541062107246964, 0.02273398730763064, -0.03266861810318722], [0.06400577161967028, 0.2157026777197298, 0.909581836740942, 0.23458842207910796, -0.1474419388972949], [0.36514935248165803, 0.5761879021864659, 0.0911556164823869, 0.08258714661263909, 0.10247603583705917], [0.4278877109529691, 0.44165990718338693, 0.12036447454419058, 0.03151552309520984, 0.007375342353827898], [0.34387269057788966, 0.3965499840168412, 0.2698245774630104, 0.23756880641606382, 0.2024915646232], [-0.7173957045461646, -0.06811237744225473, -0.015477491337003072, -0.14709454308902306, 0.19222854531939065], [-1.0, -0.19415361145439572, 0.09357733117254313, -0.13010758003798104, 0.4622353134103789], [-0.8965172712876514, -0.09620922548527852, 0.12062900505310432, -0.06121637556088634, 0.8181090778514123], [-0.7539548614274383, 0.3111813232202093, 0.36211898446868435, -0.950046465271142, -0.7891974762411835], [-0.6491547013092394, -0.09731644483087137, -0.5165276255093704, 0.6357267070352153, -0.29601620945453183], [-0.7102070304037882, 0.026604429522505853, -0.4353675258856115, 0.6687376633243397, -0.5831852483979656]], "edges": [], "percents_explained": [16.076374747732, 8.74470589961877, 7.628507755515241, 6.633959480413246, 6.0907374424264775], "sample_ids": ["A1", "A10", "A2", "A7", "A8", "A9", "B1", "B10", "B11", "B12", "B4", "B9", "G2", "G3", "G5", "G6", "G7", "G9"]}, "metadata": [["A1", "A"], ["A10", "A"], ["A2", "A"], ["A7", "A"], ["A8", "A"], ["A9", "A"], ["B1", "B"], ["B10", "B"], ["B11", "B"], ["B12", "B"], ["B4", "B"], ["B9", "B"], ["G2", "G"], ["G3", "G"], ["G5", "G"], ["G6", "G"], ["G7", "G"], ["G9", "G"]], "metadata_headers": ["SampleID", "Group"], "settings": {}, "type": "scatter"}};
+
+  var plot, biplot = null, ec;
+
+  function init() {
+    // Initialize the DecompositionModel for the scatter plot, and optionally
+    // add one for the biplot arrows
+    plot = new DecompositionModel(data.plot.decomposition,
+                                  data.plot.metadata_headers,
+                                  data.plot.metadata,
+                                  data.plot.type);
+
+    if (data.biplot) {
+      biplot = new DecompositionModel(data.biplot.decomposition,
+                                      data.biplot.metadata_headers,
+                                      data.biplot.metadata,
+                                      data.biplot.type);
+    }
+
+    ec = new EmperorController(plot, biplot, "emperor-notebook-0x6f2b23a7");
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    ec.render();
+  }
+  $(window).resize(function() {
+    ec.resize(div.innerWidth(), div.innerHeight());
+  });
+
+  $(function(){
+    init();
+    animate();
+
+    ec.ready = function () {
+      // any other code that needs to be executed when emperor is loaded should
+      // go here
+      ec.loadConfig(data.plot.settings);
+    }
+  });
+
+}); // END REQUIRE.JS block
+</script>
+  </body>
+</html>
